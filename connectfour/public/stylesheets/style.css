@@ -1,7 +1,7 @@
 body{
+  width: 70%;
+  padding-left: 15%;
+  padding-right: 15%;
+  background-color: rgb(7, 221, 221);
   font-family: "Footlight MT Light", Times, serif;
-}
-
-a {
-  color: #00B7FF;
 }

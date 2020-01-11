@@ -3,3 +3,17 @@
 .logo{
     height: 20%;
 }
+
+#logotitle{
+    width:30%; 
+    margin-left:35%; 
+    margin-right:35%;
+    text-align: center;
+}
+
+#rules{
+    border-style: double;
+    border-width: 5px;
+    border-color: #000;
+    width: 30%;
+  }
