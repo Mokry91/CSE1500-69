@@ -12,14 +12,10 @@
 }
 
 #rules{
+    background-color: #FFF200;
     border-style: double;
     border-width: 5px;
     border-color: #000;
     width: 30%;
 }
 
-#button{
-    border: 0;
-    padding: 0;
-    background: transparent;
-}
