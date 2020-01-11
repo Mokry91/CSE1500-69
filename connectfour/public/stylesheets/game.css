@@ -6,6 +6,6 @@
     display: inline-block;
 }
 
-.gameboard{
+#gameboard{
     background-color: #000;
 }
