@@ -1,1 +1,5 @@
 @import "style.css";
+
+body{
+    font-family: "Footlight MT Light", Times, serif;
+}
