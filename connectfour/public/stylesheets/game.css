@@ -1,12 +1,5 @@
 @import "style.css";
 
-.dot {
-    height: 25px;
-    width: 25px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-}
 
 #logotitle{
     width:20%; 
@@ -17,6 +10,13 @@
 
 #gameboard{
     background-color: #000;
+    display: flex;
+    flex-flow: row wrap;
+    width:40%;
+}
+
+.dot{
+    width: 100%;
 }
 
 #homebutton{
