@@ -9,7 +9,7 @@
 }
 
 .logo{
-    height: 20%;
+    height: 6.9%;
 }
 
 #gameboard{
@@ -20,8 +20,4 @@
 
 .dot{
     width: 100%;
-}
-
-#homebutton{
-    width: 5%;
 }

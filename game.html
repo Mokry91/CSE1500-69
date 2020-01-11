@@ -6,27 +6,34 @@
   </head>
   <body>
     <a href="splash.html" method="get">
-        <img id = "homebutton"  src="connectfour/public/images/home.png">
+        <table id="logotitle">
+            <tr>
+                <th>
+                    <img class="logo" src="connectfour/public/images/logo1.png" alt="logo">
+                </th>
+                <th>
+                    <h1>
+                        CONNECT FOUR
+                    </h1>
+                </th>
+                <th>
+                    <img class="logo" src="connectfour/public/images/logo.png" alt="logo">
+                </th>
+            </tr>
+        </table>
     </a>
-    <table id="logotitle">
-      <tr>
-        <th>
-          <img class="logo" src="connectfour/public/images/logo1.png" alt="logo">
-        </th>
-        <th>
-          <h1>
-            CONNECT FOUR
-          </h1>
-        </th>
-        <th>
-          <img class="logo" src="connectfour/public/images/logo.png" alt="logo">
-        </th>
-      </tr>
-    </table>
     <main>
-        <section id="pointer"><img src="connectfour/public/images/pointer.gif"></section>
       <section id="gameboard">
           <table>
+              <tr>
+                  <th><span id="p0"><img hidden class="dot" src="connectfour/public/images/pointer_red.png"/></span></th>
+                  <th><span id="p1"><img hidden class="dot" src="connectfour/public/images/pointer_red.png"/></span></th>
+                  <th><span id="p2"><img class="dot" src="connectfour/public/images/pointer_red.png"/></span></th>
+                  <th><span id="p3"><img hidden class="dot" src="connectfour/public/images/pointer_red.png"/></span></th>
+                  <th><span id="p4"><img hidden class="dot" src="connectfour/public/images/pointer_red.png"/></span></th>
+                  <th><span id="p5"><img hidden class="dot" src="connectfour/public/images/pointer_red.png"/></span></th>
+                  <th><span id="p6"><img hidden class="dot" src="connectfour/public/images/pointer_red.png"/></span></th>
+              </tr>
               <tr>
                   <th><span id="50"><img class="dot" src="connectfour/public/images/circle.png"/></span></th>
                   <th><span id="51"><img class="dot" src="connectfour/public/images/circle.png"/></span></th>
