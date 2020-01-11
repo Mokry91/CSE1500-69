@@ -3,9 +3,12 @@
 
 #logotitle{
     width:20%; 
-    /*margin-left:35%; 
-    margin-right:35%;*/
     text-align: right;
+}
+
+
+.logo{
+    height: 20%;
 }
 
 #gameboard{
