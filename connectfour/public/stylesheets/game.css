@@ -1,3 +1,9 @@
+@import "style.css";
+
+body{
+    font-family: "Footlight MT Light", Times, serif;
+}
+
 .dot {
     height: 25px;
     width: 25px;
