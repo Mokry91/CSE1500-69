@@ -3,9 +3,8 @@
 
 #logotitle{
     width:20%; 
-    text-align: right;
+    text-align: center;
 }
-
 
 .logo{
     height: 20%;
@@ -13,8 +12,6 @@
 
 #gameboard{
     background-color: #000;
-    display: flex;
-    flex-flow: row wrap;
     width:40%;
     margin-left: 30%;
 }
