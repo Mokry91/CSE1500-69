@@ -24,7 +24,52 @@ let moveRow = function(row, column, color){
 };
 
 let checkWin = function(row, column){
-    console.log('done');
+    return function() {
+        //Horizontal
+        curr = undefined;
+        amount = 0;
+        for (let i = -3; i < 4; i++){
+            if ($('#circle'+row+(column+i)).attr('src') === curr) amount++;
+            else {
+                amount = 1;
+                curr = $('#circle'+row+(column+i)).attr('src');
+            }
+            if (amount === 4) {console.log("WIN"); return;}
+        }
+        //Vertical
+        curr = undefined;
+        amount = 0;
+        for (let i = -3; i < 4; i++){
+            if ($('#circle'+(row+i)+column).attr('src') === curr) amount++;
+            else {
+                amount = 1;
+                curr = $('#circle'+(row+i)+column).attr('src');
+            }
+            if (amount === 4) {console.log("WIN"); return;}
+        }
+        //Diagonal 1
+        curr = undefined;
+        amount = 0;
+        for (let i = -3; i < 4; i++){
+            if ($('#circle'+(row+i)+(column+i)).attr('src') === curr) amount++;
+            else {
+                amount = 1;
+                curr = $('#circle'+(row+i)+(column+i)).attr('src');
+            }
+            if (amount === 4) {console.log("WIN"); return;}
+        }
+        //Diagonal 2
+        curr = undefined;
+        amount = 0;
+        for (let i = -3; i < 4; i++){
+            if ($('#circle'+(row+i)+(column-i)).attr('src') === curr) amount++;
+            else {
+                amount = 1;
+                curr = $('#circle'+(row+i)+(column-i)).attr('src');
+            }
+            if (amount === 4) {console.log("WIN"); return;}
+        }
+    }
 };
 
 let insertInColumn = function(column, color){
@@ -33,10 +78,9 @@ let insertInColumn = function(column, color){
         setTimeout(moveRow(row, column, color), (5-row)*200);
         row--;
     }
-    console.log((6-row)*200+100);
-    setTimeout(checkWin(row+1, column), (6-row)*200+100);
+    setTimeout(checkWin(row+1, column), (6-row)*200+10);
     if (color === 'yellow')
-        setTimeout(function(){my_turn = true;}, (6-row)*200+100);
+        setTimeout(function(){my_turn = true;}, (6-row)*200+10);
 };
 
 let clickOnColumn = function(column){
