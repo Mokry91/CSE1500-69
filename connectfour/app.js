@@ -16,4 +16,4 @@ app.get("/play", function(req, res){
 
 app.get("/", function(req, res){
   res.sendFile("splash.html", {root: "./"});
-})
+});
