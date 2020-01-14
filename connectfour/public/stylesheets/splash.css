@@ -19,3 +19,11 @@
     width: 30%;
 }
 
+#rules{
+    float: left;
+}
+
+#button{
+    float: right;
+}
+
