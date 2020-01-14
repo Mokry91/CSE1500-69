@@ -50,7 +50,7 @@ app.post("/play/:column", function(req, res){
 })
 
 app.get("/play", function(req, res){
-  res.sendFile("game.html", {root: "./"}); 
+  res.sendFile("game.html", {root: "./"});
 });
 
 app.get("/", function(req, res){
