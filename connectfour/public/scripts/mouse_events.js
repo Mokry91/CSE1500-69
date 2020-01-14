@@ -87,6 +87,7 @@ let clickOnColumn = function(column){
     return function(){
         if ($('#circle5'+column).attr('src') !== emptyCircle) return;
         if (!my_turn) return;
+        $.post("/play/"+column);
         my_turn = false;
         insertInColumn(column, 'red');
     }
