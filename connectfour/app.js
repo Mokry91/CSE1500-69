@@ -31,7 +31,8 @@ var currentPlayer = 0;
 app.post("/play/:column/:nr", function(req, res){
   currentPlayer = req.params.nr;
   col = req.params.column;
-  console.log(req.params.column);
+  res.end();
+  //console.log(req.params.column);
 });
 
 app.get("/play/move/:nr", function(req, res){
@@ -42,8 +43,9 @@ app.get("/play/move/:nr", function(req, res){
     col: col,
     turn: turn
   }
-  console.log(info);
-  res.json(info);
+    console.log(info);
+    res.json(info);
+
 });
 
 app.post("/play/moved", function(req, res){
@@ -65,7 +67,7 @@ app.get("/play/getinfo", function(req, res){
     turn: playerX["turn"],
     nr: playerX["nr"]
   }
-  console.log(game);
+  //console.log(game);
   res.json(info);
 });
 
