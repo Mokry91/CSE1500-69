@@ -1,13 +1,17 @@
-
-
 var express = require("express");
 var http = require("http");
 var websocket = require("ws");
 var Game = require("./game");
+var player = require("./player");
 
 var stats = require("./stats");
 var port = process.argv[2];
 var app = express();
+
+var playerID = 0;
+var game = new Game(1);
+
+app.use(express.static(__dirname));
 
 app.use(function(req, res, next) {
 	console.log('[LOG] %s\t%s\t%s\t%s',
@@ -19,30 +23,50 @@ app.use(function(req, res, next) {
 	next(); // call on to next component
 });
 
-app.use(express.static(__dirname));
-
 var server = http.createServer(app);
 var col;
 var turn = false;
+var currentPlayer = 0;
 
-app.post("/play/:column", function(req, res){
+app.post("/play/:column/:nr", function(req, res){
+  currentPlayer = req.params.nr;
   col = req.params.column;
-  turn = true;
   console.log(req.params.column);
 });
 
-app.get("/play/move", function(req, res){
+app.get("/play/move/:nr", function(req, res){
+  if(req.params.nr == currentPlayer) {turn = false}
+  else {turn = true}
   var info = {
+    num: req.params.nr,
     col: col,
     turn: turn
   }
+  console.log(info);
   res.json(info);
-  turn = false;
-})
+});
+
+app.post("/play/moved", function(req, res){
+  col = undefined;
+  res.end();
+});
 
 app.get("/play", function(req, res){
-  res.sendFile("game.html", {root: "./"});
+  res.sendFile("game.html", {root: "./"}); 
+});
 
+app.get("/play/getinfo", function(req, res){
+  if(game["gamePlayers"] < 2){
+    var playerX = new player(playerID++);
+    game.addPlayer(playerX);
+  }
+  var info = {
+    gameStart: (game["gamePlayers"] === 2),
+    turn: playerX["turn"],
+    nr: playerX["nr"]
+  }
+  console.log(game);
+  res.json(info);
 });
 
 app.get("/", function(req, res){
@@ -50,6 +74,5 @@ app.get("/", function(req, res){
 });
 
 
-server.listen(port, function(){
-  console.log("listening");
-});
+
+server.listen(port);

@@ -6,10 +6,12 @@ let showPointerInColumn = function(column){
     };
 };
 
-let my_turn = true;
+let my_turn = false;
 let emptyCircle = 'public/images/circle.png';
 let redCircle = 'public/images/red.png';
 let yellowCircle = 'public/images/yellow.png';
+
+let playerNR = 0;
 
 let moveRow = function(row, column, color){
     return function(){
@@ -89,13 +91,17 @@ let clickOnColumn = function(column){
         if ($('#circle5'+column).attr('src') !== emptyCircle) return;
         if (!my_turn) return;
         my_turn = false;
-        $.post("/play/"+column);
+        $.post("/play/"+column+"/"+playerNR);
         insertInColumn(column, 'red');
     }
 };
 
 $(document).ready(function(){
-    
+    $.getJSON("/play/getinfo", function(info){
+        my_turn = info["turn"];
+        playerNR = info["nr"];
+        console.log("i got my turn info " + my_turn);
+    })
     for (let i = 0; i < 6; i++)
         for (let j = 0; j < 7; j++)
             $('#circle' + i + j).mouseenter(showPointerInColumn(j)).click(clickOnColumn(j));
@@ -103,16 +109,19 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-    window.setInterval(updatePlay, 5000);
+    window.setInterval(updatePlay, 1000);
 });
 
+var moved = false;
+
 function updatePlay(){
-    console.log("im really here");
-    $.getJSON("/play/move").done(function(info){
-        console.log("hey "+ info.col);
-        if(my_turn){
+    $.getJSON("/play/move/"+playerNR).done(function(info){
+        console.log("col" + info["col"])
+        my_turn = info["turn"];
+        if(my_turn && info["col"] != undefined){
             insertInColumn(info.col, 'yellow');
-            
+           
+            $.post("/play/moved")
         } 
     });
 };

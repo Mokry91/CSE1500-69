@@ -2,25 +2,22 @@ var game = function(gameID){
     this.playerA = null;
     this.playerB = null;
     this.id = gameID;
-    this.gameState = "0 JOINT"; //"A" means A won, "B" means B won, "ABORTED" means the game was aborted
-    this.gameBoard = [
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0],
-      ];
+    this.gamePlayers = 0; //0 or 1 or 2
 }
 
-game.prototype.addPlayer = function(p) {  
+game.prototype.addPlayer = function(p) {
+    this.gamePlayers ++;  
     if (this.playerA == null) {
-      this.playerA = p;
-      return "A";
+        p["turn"] = true;
+        p["nr"] = 1;
+         this.playerA = p;
+         return "A";
     } else {
-      this.playerB = p;
-      return "B";
+         p["nr"] = 2;
+         this.playerB = p;
+         return "B";
     }
+    
   };
 
   module.exports = game;
