@@ -71,13 +71,14 @@ let checkWin = function(row, column){
     }
 };
 
+
 var insertInColumn = function(column, color){
     let row = 5;
     while ($('#circle'+row+column).attr('src') === emptyCircle){
         setTimeout(moveRow(row, column, color), (5-row)*200);
         row--;
     }
-    $.post("/play/"+column+"/"+(4-row));
+    
     setTimeout(checkWin(row+1, column), (6-row)*200+10);
     if (color === 'yellow')
         setTimeout(function(){my_turn = true;}, (6-row)*200+10);
@@ -88,13 +89,29 @@ let clickOnColumn = function(column){
         if ($('#circle5'+column).attr('src') !== emptyCircle) return;
         if (!my_turn) return;
         my_turn = false;
+        $.post("/play/"+column);
         insertInColumn(column, 'red');
     }
 };
 
-
 $(document).ready(function(){
+    
     for (let i = 0; i < 6; i++)
         for (let j = 0; j < 7; j++)
             $('#circle' + i + j).mouseenter(showPointerInColumn(j)).click(clickOnColumn(j));
 });
+
+
+$(document).ready(function(){
+    window.setInterval(updatePlay, 5000);
+});
+
+function updatePlay(){
+    console.log("im really here");
+    $.getJSON("/play/move").done(function(info){
+        console.log("hey "+ info.col);
+        if(my_turn){
+            insertInColumn(info.col, 'yellow');
+        } 
+    });
+};
