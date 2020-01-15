@@ -112,6 +112,7 @@ function updatePlay(){
         console.log("hey "+ info.col);
         if(my_turn){
             insertInColumn(info.col, 'yellow');
+            
         } 
     });
 };
