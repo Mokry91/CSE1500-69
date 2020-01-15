@@ -1,4 +1,3 @@
-
 let showPointerInColumn = function(column){
     return function() {
         for (let i = 0; i < 7; i++) {
@@ -72,12 +71,13 @@ let checkWin = function(row, column){
     }
 };
 
-let insertInColumn = function(column, color){
+var insertInColumn = function(column, color){
     let row = 5;
     while ($('#circle'+row+column).attr('src') === emptyCircle){
         setTimeout(moveRow(row, column, color), (5-row)*200);
         row--;
     }
+    $.post("/play/"+column+"/"+(4-row));
     setTimeout(checkWin(row+1, column), (6-row)*200+10);
     if (color === 'yellow')
         setTimeout(function(){my_turn = true;}, (6-row)*200+10);
@@ -87,7 +87,6 @@ let clickOnColumn = function(column){
     return function(){
         if ($('#circle5'+column).attr('src') !== emptyCircle) return;
         if (!my_turn) return;
-        $.post("/play/"+column);
         my_turn = false;
         insertInColumn(column, 'red');
     }
