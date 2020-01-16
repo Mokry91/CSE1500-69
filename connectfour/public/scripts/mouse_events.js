@@ -29,6 +29,15 @@ let moveRow = function(row, column, color){
     }
 };
 
+let winner = function(img){
+    if(img == 'public/images/red.png'){
+        return "you won";
+    }
+    if(img == 'public/images/yellow.png'){
+        return "you lost";
+    }
+}
+
 let checkWin = function(row, column){
     return function() {
         //Horizontal
@@ -42,7 +51,7 @@ let checkWin = function(row, column){
             }
             if (amount === 4) {
                 console.log("WIN"  + $('#circle'+(row+i)+column).attr('src'));
-                document.getElementById("gameinfo").innerHTML = $('#circle'+(row+i)+column).attr('src') + " won"; 
+                document.getElementById("gameinfo").innerHTML = winner($('#circle'+(row+i)+column).attr('src')); 
                 return;
             }
         }
@@ -57,7 +66,7 @@ let checkWin = function(row, column){
             }
             if (amount === 4) {
                 console.log("WIN" + $('#circle'+(row+i)+column).attr('src')); 
-                document.getElementById("gameinfo").innerHTML = $('#circle'+(row+i)+column).attr('src') + " won"; 
+                document.getElementById("gameinfo").innerHTML = winner($('#circle'+(row+i)+column).attr('src'));
                 return;
             }
         }
@@ -72,7 +81,7 @@ let checkWin = function(row, column){
             }
             if (amount === 4) {
                 console.log("WIN"  + $('#circle'+(row+i)+column).attr('src')); 
-                document.getElementById("gameinfo").innerHTML = $('#circle'+(row+i)+column).attr('src') + " won"; 
+                document.getElementById("gameinfo").innerHTML = winner($('#circle'+(row+i)+column).attr('src'));
                 return;
             }
         }
@@ -87,7 +96,7 @@ let checkWin = function(row, column){
             }
             if (amount === 4) {
                 console.log("WIN"  + $('#circle'+(row+i)+column).attr('src')); 
-                document.getElementById("gameinfo").innerHTML = $('#circle'+(row+i)+column).attr('src') + " won"; 
+                document.getElementById("gameinfo").innerHTML = winner($('#circle'+(row+i)+column).attr('src'));
                 return;
             }
         }
