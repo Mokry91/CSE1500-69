@@ -31,9 +31,11 @@ let moveRow = function(row, column, color){
 
 let winner = function(img){
     if(img == 'public/images/red.png'){
+        my_turn = false;
         return "you won";
     }
     if(img == 'public/images/yellow.png'){
+        my_turn = false;
         return "you lost";
     }
 }
@@ -112,8 +114,8 @@ var insertInColumn = function(column, color){
     }
     
     setTimeout(checkWin(row+1, column), (6-row)*200+10);
-    if (color === 'yellow')
-        setTimeout(function(){my_turn = true;}, (6-row)*200+10);
+    /*if (color === 'yellow')
+        setTimeout(function(){my_turn = true;}, (6-row)*200+10);*/
 };
 
 let clickOnColumn = function(column){
