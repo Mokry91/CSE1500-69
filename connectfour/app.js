@@ -101,17 +101,21 @@ wss.on("connection", function connection(ws){
     oponent: oponent,
     nr: playerX["nr"]
   }));
-  console.log(game);
   if(game.isFull()){
     game = new Game(connectionID++);
   }
 
   ws.on("message", function incoming(message){
+    let info = JSON.parse(message);
     let thisgame = websockets[con.id];
     if(ws === thisgame.playerA.con){
-      thisgame.playerB.con.send(JSON.stringify({type: "move", col: message}));
+      if(info.type == "column"){
+        thisgame.playerB.con.send(JSON.stringify({type: "move", col: info.col}));
+      }
     }else{
-      thisgame.playerA.con.send(JSON.stringify({type: "move", col: message}));
+      if(info.type == "column"){
+        thisgame.playerA.con.send(JSON.stringify({type: "move", col: info.col}));
+      }
     }
   });
 });

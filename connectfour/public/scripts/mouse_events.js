@@ -40,7 +40,11 @@ let checkWin = function(row, column){
                 amount = 1;
                 curr = $('#circle'+row+(column+i)).attr('src');
             }
-            if (amount === 4) {console.log("WIN"); return;}
+            if (amount === 4) {
+                console.log("WIN"  + $('#circle'+(row+i)+column).attr('src'));
+                document.getElementById("gameinfo").innerHTML = $('#circle'+(row+i)+column).attr('src') + " won"; 
+                return;
+            }
         }
         //Vertical
         curr = undefined;
@@ -51,7 +55,11 @@ let checkWin = function(row, column){
                 amount = 1;
                 curr = $('#circle'+(row+i)+column).attr('src');
             }
-            if (amount === 4) {console.log("WIN"); return;}
+            if (amount === 4) {
+                console.log("WIN" + $('#circle'+(row+i)+column).attr('src')); 
+                document.getElementById("gameinfo").innerHTML = $('#circle'+(row+i)+column).attr('src') + " won"; 
+                return;
+            }
         }
         //Diagonal 1
         curr = undefined;
@@ -62,7 +70,11 @@ let checkWin = function(row, column){
                 amount = 1;
                 curr = $('#circle'+(row+i)+(column+i)).attr('src');
             }
-            if (amount === 4) {console.log("WIN"); return;}
+            if (amount === 4) {
+                console.log("WIN"  + $('#circle'+(row+i)+column).attr('src')); 
+                document.getElementById("gameinfo").innerHTML = $('#circle'+(row+i)+column).attr('src') + " won"; 
+                return;
+            }
         }
         //Diagonal 2
         curr = undefined;
@@ -73,7 +85,11 @@ let checkWin = function(row, column){
                 amount = 1;
                 curr = $('#circle'+(row+i)+(column-i)).attr('src');
             }
-            if (amount === 4) {console.log("WIN"); return;}
+            if (amount === 4) {
+                console.log("WIN"  + $('#circle'+(row+i)+column).attr('src')); 
+                document.getElementById("gameinfo").innerHTML = $('#circle'+(row+i)+column).attr('src') + " won"; 
+                return;
+            }
         }
     }
 };
@@ -95,10 +111,10 @@ let clickOnColumn = function(column){
     return function(){
         if ($('#circle5'+column).attr('src') !== emptyCircle) return;
         if (!my_turn) return;
+        document.getElementById("gameinfo").innerHTML = "opponents turn";
         my_turn = false;
         waiting = true;
-        socket.send(column);
-        //$.post("/play/"+column+"/"+playerNR);
+        socket.send(JSON.stringify({col:column, type:"column"}));
         insertInColumn(column, 'red');
     }
 };
@@ -128,14 +144,21 @@ function updatePlay(){
 socket.onmessage = function(event){
     info = JSON.parse(event.data);
     if(info.type == "gameBegin"){
+        console.log(info["turn"]);
         my_turn = info["turn"];
+        if(my_turn){
+            document.getElementById("gameinfo").innerHTML = "your turn";
+        }else{
+            document.getElementById("gameinfo").innerHTML = "opponents turn";
+        }
         waiting = !info["turn"];
         playerNR = info["nr"];
         oponentNR = info["oponent"];
     }
-    if(info.type = "move"){
+    if(info.type === "move"){
         insertInColumn(info.col, 'yellow');
         my_turn = true;
+        document.getElementById("gameinfo").innerHTML = "your turn";
     }
 };
 

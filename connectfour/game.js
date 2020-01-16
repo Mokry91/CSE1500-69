@@ -25,7 +25,6 @@ game.prototype.addPlayer = function(p) {
   };
 
   game.prototype.isFull = function(){
-      console.log(this.gamePlayers == 2 + " " + this.gamePlayers);
       return this.gamePlayers == 2;
   }
 
