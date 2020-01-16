@@ -6,6 +6,8 @@ let showPointerInColumn = function(column){
     };
 };
 
+var socket = new WebSocket("ws://localhost:3000");
+
 let my_turn = false;
 let emptyCircle = 'public/images/circle.png';
 let redCircle = 'public/images/red.png';
@@ -14,6 +16,7 @@ let yellowCircle = 'public/images/yellow.png';
 var waiting = true;
 
 let playerNR = 0;
+let oponentNR = 0;
 
 let moveRow = function(row, column, color){
     return function(){
@@ -94,37 +97,25 @@ let clickOnColumn = function(column){
         if (!my_turn) return;
         my_turn = false;
         waiting = true;
-        $.post("/play/"+column+"/"+playerNR);
+        socket.send(column);
+        //$.post("/play/"+column+"/"+playerNR);
         insertInColumn(column, 'red');
     }
 };
 
 $(document).ready(function(){
-    $.getJSON("/play/getinfo", function(info){
-        my_turn = info["turn"];
-        waiting = !info["turn"];
-        playerNR = info["nr"];
-        console.log("i got my turn info " + my_turn);
-    })
     for (let i = 0; i < 6; i++)
         for (let j = 0; j < 7; j++)
             $('#circle' + i + j).mouseenter(showPointerInColumn(j)).click(clickOnColumn(j));
 });
-
-/*
-$(document).ready(function(){
-    window.setInterval(updatePlay, 1000);
-});*/
-
-window.setInterval(updatePlay, 1000);
+//this will go away lol
+/*window.setInterval(updatePlay, 1000);
 
 function updatePlay(){
     if(waiting){
-        console.log("go go go");
         $.getJSON("/play/move/"+playerNR).done(function(info){
-            
             console.log("col" + info["col"]);
-            my_turn = info["turn"];
+            //my_turn = info["turn"];
             if(my_turn && info["col"] != undefined){
                 insertInColumn(info.col, 'yellow');
                 waiting=false;
@@ -132,4 +123,19 @@ function updatePlay(){
             } 
         });
     }
+};*/
+
+socket.onmessage = function(event){
+    info = JSON.parse(event.data);
+    if(info.type == "gameBegin"){
+        my_turn = info["turn"];
+        waiting = !info["turn"];
+        playerNR = info["nr"];
+        oponentNR = info["oponent"];
+    }
+    if(info.type = "move"){
+        insertInColumn(info.col, 'yellow');
+        my_turn = true;
+    }
 };
+

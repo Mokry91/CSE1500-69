@@ -9,9 +9,11 @@ var port = process.argv[2];
 var app = express();
 
 var playerID = 0;
-var game = new Game(1);
+var oponent = 0;
+connectionID = 0;
 
 app.use(express.static(__dirname));
+
 
 app.use(function(req, res, next) {
 	console.log('[LOG] %s\t%s\t%s\t%s',
@@ -24,6 +26,8 @@ app.use(function(req, res, next) {
 });
 
 var server = http.createServer(app);
+const wss = new websocket.Server({ server });
+
 var col;
 var turn = false;
 var currentPlayer = 0;
@@ -32,7 +36,6 @@ app.post("/play/:column/:nr", function(req, res){
   currentPlayer = req.params.nr;
   col = req.params.column;
   res.end();
-  //console.log(req.params.column);
 });
 
 app.get("/play/move/:nr", function(req, res){
@@ -41,6 +44,7 @@ app.get("/play/move/:nr", function(req, res){
   var info = {
     num: req.params.nr,
     col: col,
+    oponent: oponent,
     turn: turn
   }
     console.log(info);
@@ -57,22 +61,59 @@ app.get("/play", function(req, res){
   res.sendFile("game.html", {root: "./"}); 
 });
 
+/*
 app.get("/play/getinfo", function(req, res){
   if(game["gamePlayers"] < 2){
     var playerX = new player(playerID++);
     game.addPlayer(playerX);
+    oponent = playerX["oponent"];
   }
   var info = {
     gameStart: (game["gamePlayers"] === 2),
     turn: playerX["turn"],
+    oponent: oponent,
     nr: playerX["nr"]
   }
   //console.log(game);
   res.json(info);
-});
+});*/
 
 app.get("/", function(req, res){
   res.sendFile("splash.html", {root: "./"});
+});
+
+var websockets = [];
+var game = new Game(stats.gamesInitialised++);
+
+wss.on("connection", function connection(ws){
+  let con = ws;
+  con.id = connectionID++;
+  var playerX = new player(playerID++);
+  playerX["con"] = con;
+  game.addPlayer(playerX);
+  oponent = playerX["oponent"];
+  websockets[con.id] = game;
+
+  con.send(JSON.stringify({
+    type: "gameBegin",
+    gameStart: (game["gamePlayers"] === 2),
+    turn: playerX["turn"],
+    oponent: oponent,
+    nr: playerX["nr"]
+  }));
+  console.log(game);
+  if(game.isFull()){
+    game = new Game(connectionID++);
+  }
+
+  ws.on("message", function incoming(message){
+    let thisgame = websockets[con.id];
+    if(ws === thisgame.playerA.con){
+      thisgame.playerB.con.send(JSON.stringify({type: "move", col: message}));
+    }else{
+      thisgame.playerA.con.send(JSON.stringify({type: "move", col: message}));
+    }
+  });
 });
 
 
