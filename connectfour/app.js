@@ -61,23 +61,6 @@ app.get("/play", function(req, res){
   res.sendFile("game.html", {root: "./"}); 
 });
 
-/*
-app.get("/play/getinfo", function(req, res){
-  if(game["gamePlayers"] < 2){
-    var playerX = new player(playerID++);
-    game.addPlayer(playerX);
-    oponent = playerX["oponent"];
-  }
-  var info = {
-    gameStart: (game["gamePlayers"] === 2),
-    turn: playerX["turn"],
-    oponent: oponent,
-    nr: playerX["nr"]
-  }
-  //console.log(game);
-  res.json(info);
-});*/
-
 app.get("/", function(req, res){
   res.sendFile("splash.html", {root: "./"});
 });
@@ -124,6 +107,9 @@ wss.on("connection", function connection(ws){
   ws.on("message", function incoming(message){
     let info = JSON.parse(message);
     let thisgame = websockets[con.id];
+    if(info.type == "gameended"){
+      thisgame.state = "end";
+    }
     if(ws === thisgame.playerA.con){
       if(info.type == "column"){
         thisgame.playerB.con.send(JSON.stringify({type: "move", col: info.col}));

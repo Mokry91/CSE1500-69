@@ -32,9 +32,11 @@ let moveRow = function(row, column, color){
 let winner = function(img){
     if(img == 'public/images/red.png'){
         my_turn = false;
+        socket.send(JSON.stringify({type: "gameended"}));
         return "you won";
     }
     if(img == 'public/images/yellow.png'){
+        socket.send(JSON.stringify({type: "gameended"}));
         my_turn = false;
         return "you lost";
     }
@@ -46,14 +48,15 @@ let checkWin = function(row, column){
         curr = undefined;
         amount = 0;
         for (let i = -3; i < 4; i++){
-            if ($('#circle'+row+(column+i)).attr('src') === curr) amount++;
+            console.log($('#circle'+row+(column+i)).attr('src'));
+            if ($('#circle'+row+(column+i)).attr('src') === curr){ amount++;}
             else {
                 amount = 1;
                 curr = $('#circle'+row+(column+i)).attr('src');
             }
             if (amount === 4) {
-                console.log("WIN"  + $('#circle'+(row+i)+column).attr('src'));
-                document.getElementById("gameinfo").innerHTML = winner($('#circle'+(row+i)+column).attr('src')); 
+                console.log("WIN"  + $('#circle'+row+(column+i)).attr('src'));
+                document.getElementById("gameinfo").innerHTML = winner($('#circle'+(row)+(column+i)).attr('src')); 
                 return;
             }
         }
