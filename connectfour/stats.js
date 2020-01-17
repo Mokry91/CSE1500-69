@@ -5,3 +5,4 @@ var gameStats = {
     gamesInitialised: 0 /* number of games successfully completed */
   };
   
+  module.exports = gameStats;

@@ -85,14 +85,29 @@ app.get("/", function(req, res){
 var websockets = [];
 var game = new Game(stats.gamesInitialised++);
 
+
 wss.on("connection", function connection(ws){
   let con = ws;
   con.id = connectionID++;
   var playerX = new player(playerID++);
+  stats.playersOnline += 1;
   playerX["con"] = con;
   game.addPlayer(playerX);
   oponent = playerX["oponent"];
   websockets[con.id] = game;
+
+  con.on("close", function(code){
+    console.log(con.id + " disconnected");
+    let game = websockets[con.id];
+    if(game.state != "end"){
+      if(game.playerA.con == con){
+        game.playerB.con.send(JSON.stringify({type: "gameover"}))
+        stats.gamesAborted += 1;
+      }else{
+        game.playerA.con.send(JSON.stringify({type: "gameover"}))
+      }
+    }
+  });
 
   con.send(JSON.stringify({
     type: "gameBegin",
@@ -102,7 +117,8 @@ wss.on("connection", function connection(ws){
     nr: playerX["nr"]
   }));
   if(game.isFull()){
-    game = new Game(connectionID++);
+    game.playerA.con.send(JSON.stringify({type:"begin"}));
+    game = new Game(stats.gamesInitialised++);
   }
 
   ws.on("message", function incoming(message){

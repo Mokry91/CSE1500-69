@@ -113,7 +113,7 @@ var insertInColumn = function(column, color){
         row--;
     }
     
-    setTimeout(checkWin(row+1, column), (6-row)*200+10);
+    setTimeout(checkWin(row+1, column), (6-row)*200+100);
     /*if (color === 'yellow')
         setTimeout(function(){my_turn = true;}, (6-row)*200+10);*/
 };
@@ -135,32 +135,24 @@ $(document).ready(function(){
         for (let j = 0; j < 7; j++)
             $('#circle' + i + j).mouseenter(showPointerInColumn(j)).click(clickOnColumn(j));
 });
-//this will go away lol
-/*window.setInterval(updatePlay, 1000);
 
-function updatePlay(){
-    if(waiting){
-        $.getJSON("/play/move/"+playerNR).done(function(info){
-            console.log("col" + info["col"]);
-            //my_turn = info["turn"];
-            if(my_turn && info["col"] != undefined){
-                insertInColumn(info.col, 'yellow');
-                waiting=false;
-                $.post("/play/moved");
-            } 
-        });
-    }
-};*/
 
 socket.onmessage = function(event){
     info = JSON.parse(event.data);
+    if(info.type == "begin"){
+        document.getElementById("gameinfo").innerHTML = "oponents turn";
+    }
+    if(info.type == "gameover"){
+        my_turn = false;
+        document.getElementById("gameinfo").innerHTML = "other player left";
+    }
     if(info.type == "gameBegin"){
         console.log(info["turn"]);
         my_turn = info["turn"];
         if(my_turn){
             document.getElementById("gameinfo").innerHTML = "your turn";
         }else{
-            document.getElementById("gameinfo").innerHTML = "opponents turn";
+            document.getElementById("gameinfo").innerHTML = "waiting for oponent";
         }
         waiting = !info["turn"];
         playerNR = info["nr"];
