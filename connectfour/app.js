@@ -1,4 +1,5 @@
 var express = require("express");
+const cookies = require("cookie-parser");
 var http = require("http");
 var websocket = require("ws");
 var Game = require("./game");
@@ -13,7 +14,8 @@ var oponent = 0;
 connectionID = 0;
 
 app.use(express.static(__dirname));
-
+var maxUser = 0;
+var users = [];
 
 app.use(function(req, res, next) {
 	console.log('[LOG] %s\t%s\t%s\t%s',
@@ -62,12 +64,20 @@ app.get("/play", function(req, res){
 });
 
 app.get("/", function(req, res){
+  if(cookies.signedCookie.userId === undefined){
+    maxUser += 1;
+    users[maxUser] = 1;
+    res.cookie.userId = maxUser;
+    cookies.signedCookie.userId = maxUser;
+  }else{
+    users[maxUser] += 1;
+    res.cookie.userId = cookies.signedCookie.userId;
+  }
   res.sendFile("splash.html", {root: "./"});
 });
 
 var websockets = [];
 var game = new Game(stats.gamesInitialised++);
-
 
 wss.on("connection", function connection(ws){
   if(game.state === "aborted"){
@@ -82,8 +92,12 @@ wss.on("connection", function connection(ws){
   oponent = playerX["oponent"];
   websockets[con.id] = game;
 
+  con.send(JSON.stringify({type: "userCookieStuff", value: users[cookies.signedCookie.userId]}));
+
+
   con.on("close", function(code){
     console.log(con.id + " disconnected");
+    stats.playersOnline -= 1;
     let game = websockets[con.id];
     if(game.state != "end" || game.state != "aborted"){
       if(game.playerA.con == con){
