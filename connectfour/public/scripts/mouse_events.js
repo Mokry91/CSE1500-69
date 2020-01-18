@@ -6,7 +6,7 @@ let showPointerInColumn = function(column){
     };
 };
 
-var socket = new WebSocket("ws://localhost:3000");
+var socket = new WebSocket("ws://connect-four69.herokuapp.com/");
 
 let my_turn = false;
 let emptyCircle = 'public/images/circle.png';
