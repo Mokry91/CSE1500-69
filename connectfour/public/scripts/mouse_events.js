@@ -85,8 +85,8 @@ let checkWin = function(row, column){
                 curr = $('#circle'+(row+i)+(column+i)).attr('src');
             }
             if (amount === 4) {
-                console.log("WIN"  + $('#circle'+(row+i)+column).attr('src')); 
-                document.getElementById("gameinfo").innerHTML = winner($('#circle'+(row+i)+column).attr('src'));
+                console.log("WIN"  + $('#circle'+(row+i)+(column+i).attr('src'));
+                document.getElementById("gameinfo").innerHTML = winner($('#circle'+(row+i)+(column+i).attr('src'));
                 return;
             }
         }
@@ -100,8 +100,8 @@ let checkWin = function(row, column){
                 curr = $('#circle'+(row+i)+(column-i)).attr('src');
             }
             if (amount === 4) {
-                console.log("WIN"  + $('#circle'+(row+i)+column).attr('src')); 
-                document.getElementById("gameinfo").innerHTML = winner($('#circle'+(row+i)+column).attr('src'));
+                console.log("WIN"  + $('#circle'+(row+i)+(column-i).attr('src'));
+                document.getElementById("gameinfo").innerHTML = winner($('#circle'+(row+i)+(column-i).attr('src'));
                 return;
             }
         }
