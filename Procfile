@@ -1,2 +1,1 @@
-web: cd connectfour
-web: node app.js
+web: cd connectfour && node app.js
