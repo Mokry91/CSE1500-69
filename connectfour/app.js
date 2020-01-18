@@ -70,6 +70,9 @@ var game = new Game(stats.gamesInitialised++);
 
 
 wss.on("connection", function connection(ws){
+  if(game.state === "aborted"){
+    game = new Game(stats.gamesInitialised++);
+  }
   let con = ws;
   con.id = connectionID++;
   var playerX = new player(playerID++);
@@ -82,16 +85,17 @@ wss.on("connection", function connection(ws){
   con.on("close", function(code){
     console.log(con.id + " disconnected");
     let game = websockets[con.id];
-    if(game.state != "end"){
+    if(game.state != "end" || game.state != "aborted"){
       if(game.playerA.con == con){
-        game.playerB.con.send(JSON.stringify({type: "gameover"}))
+        if(game.playerB != null ) {game.playerB.con.send(JSON.stringify({type: "gameover"}))}
+        game.state = "aborted";
         stats.gamesAborted += 1;
       }else{
         game.playerA.con.send(JSON.stringify({type: "gameover"}))
       }
     }
   });
-
+  console.log(game.state+ " " + game.id);
   con.send(JSON.stringify({
     type: "gameBegin",
     gameStart: (game["gamePlayers"] === 2),
@@ -99,6 +103,7 @@ wss.on("connection", function connection(ws){
     oponent: oponent,
     nr: playerX["nr"]
   }));
+  console.log(game.state);
   if(game.isFull()){
     game.playerA.con.send(JSON.stringify({type:"begin"}));
     game = new Game(stats.gamesInitialised++);
@@ -124,4 +129,5 @@ wss.on("connection", function connection(ws){
 
 
 
-server.listen(port);
+//server.listen(port);
+server.listen(process.env.PORT || 3000);
