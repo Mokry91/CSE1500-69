@@ -13,6 +13,7 @@ var playerID = 0;
 var oponent = 0;
 connectionID = 0;
 
+app.set("view engine", "ejs");
 app.use(express.static(__dirname));
 var maxUser = 0;
 var users = [];
