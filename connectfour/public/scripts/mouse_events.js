@@ -125,7 +125,7 @@ let clickOnColumn = function(column){
     return function(){
         if ($('#circle5'+column).attr('src') !== emptyCircle) return;
         if (!my_turn) return;
-        document.getElementById("gameinfo").innerHTML = "opponents turn";
+        document.getElementById("gameinfo").innerHTML = "Opponent's Turn";
         my_turn = false;
         waiting = true;
         socket.send(JSON.stringify({col:column, type:"column"}));
