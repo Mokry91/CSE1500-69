@@ -74,12 +74,12 @@ app.get("/", function(req, res){
     users[maxUser] += 1;
     res.cookie.userId = cookies.signedCookie.userId;
   }
-  res.render("splash.ejs", {
-    gamesInitialized: stats.gamesInitialized,
+  /*res.render("views/splash.ejs", {
+    gamesInitialised: stats.gamesInitialized,
     gamesAborted: stats.gamesAborted,
     playersOnline: stats.playersOnline
-  });
-  //res.sendFile("splash.html", {root: "./"});
+  });*/
+  res.sendFile("splash.html", {root: "./"});
 });
 
 var websockets = [];
