@@ -13,6 +13,7 @@ var playerID = 0;
 var oponent = 0;
 connectionID = 0;
 
+app.set("view engine", "ejs");
 app.use(express.static(__dirname));
 var maxUser = 0;
 var users = [];
@@ -73,6 +74,11 @@ app.get("/", function(req, res){
     users[maxUser] += 1;
     res.cookie.userId = cookies.signedCookie.userId;
   }
+  /*res.render("views/splash.ejs", {
+    gamesInitialised: stats.gamesInitialized,
+    gamesAborted: stats.gamesAborted,
+    playersOnline: stats.playersOnline
+  });*/
   res.sendFile("splash.html", {root: "./"});
 });
 

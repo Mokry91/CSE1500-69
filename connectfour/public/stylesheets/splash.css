@@ -25,6 +25,12 @@ h2::before,h2::after{
     padding-right: 20px;
 }
 
+
+#stats{
+    position: absolute;
+    top: 40%;
+}
+
 #rules{
     float: left;
 }
