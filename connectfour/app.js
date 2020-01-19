@@ -60,8 +60,10 @@ app.post("/play/moved", function(req, res){
   res.end();
 });
 
-app.get("/play", function(req, res){
-  res.sendFile("game.html", {root: "./"}); 
+app.get("/play/:name", function(req, res){
+
+  res.sendFile("game.html", {root: "./"});
+  console.log(params.name);
 });
 
 app.get("/", function(req, res){
@@ -149,5 +151,5 @@ wss.on("connection", function connection(ws){
 
 
 
-//server.listen(port);
+// server.listen(3000);
 server.listen(process.env.PORT || 3000);

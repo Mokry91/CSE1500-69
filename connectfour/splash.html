@@ -4,7 +4,6 @@
     <title>Connect four</title>
     <link rel="stylesheet" href="public/stylesheets/splash.css"/>
 </head>
-<body>
 <main >
     <img id="tulogo1" src="public/images/gay.png"/>
     <img id="tulogo2" src="public/images/gay.png"/>
@@ -31,6 +30,8 @@
             </th>
         </tr>
     </table>
+    <h4>YOUR NAME: </h4>
+    <input id="name">
     <div>welcome back for the <span id="cookie"></span>th time</div>
     <section id="rules">
         <!--img src ="connectfour/public/images/rules_background.gif" alt="rules"-->
@@ -39,11 +40,9 @@
     </section>
       <h3 id="stats"></h3>
 </main>
-<form action="/play" method="get">
-    <a id="button" href = "/play">
-        <img src = "public/images/play.png" class="playButton" alt="play">
-    </a>
-</form>
+<div id="button">
+    <img src = "public/images/play.png" id="playButton" alt="play">
+</div>
 
 <script src="jquery/jquery.js"></script>
 <script src="public/scripts/userInfo.js"></script>
