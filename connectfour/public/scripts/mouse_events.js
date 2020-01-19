@@ -33,12 +33,12 @@ let winner = function(img){
     if(img == 'public/images/red.png'){
         my_turn = false;
         socket.send(JSON.stringify({type: "gameended"}));
-        return "you won";
+        return "You Won!";
     }
     if(img == 'public/images/yellow.png'){
         socket.send(JSON.stringify({type: "gameended"}));
         my_turn = false;
-        return "you lost";
+        return "You Lost :(";
     }
 }
 
@@ -125,7 +125,7 @@ let clickOnColumn = function(column){
     return function(){
         if ($('#circle5'+column).attr('src') !== emptyCircle) return;
         if (!my_turn) return;
-        document.getElementById("gameinfo").innerHTML = "opponents turn";
+        document.getElementById("gameinfo").innerHTML = "Opponent's Turn";
         my_turn = false;
         waiting = true;
         socket.send(JSON.stringify({col:column, type:"column"}));
@@ -143,19 +143,19 @@ $(document).ready(function(){
 socket.onmessage = function(event){
     info = JSON.parse(event.data);
     if(info.type == "begin"){
-        document.getElementById("gameinfo").innerHTML = "oponents turn";
+        document.getElementById("gameinfo").innerHTML = "Opponent's Turn";
     }
     if(info.type == "gameover"){
         my_turn = false;
-        document.getElementById("gameinfo").innerHTML = "other player left";
+        document.getElementById("gameinfo").innerHTML = "Other Player Left";
     }
     if(info.type == "gameBegin"){
         console.log(info["turn"]);
         my_turn = info["turn"];
         if(my_turn){
-            document.getElementById("gameinfo").innerHTML = "your turn";
+            document.getElementById("gameinfo").innerHTML = "Your Turn";
         }else{
-            document.getElementById("gameinfo").innerHTML = "waiting for oponent";
+            document.getElementById("gameinfo").innerHTML = "Waiting for Opponent";
         }
         waiting = !info["turn"];
         playerNR = info["nr"];
@@ -164,7 +164,7 @@ socket.onmessage = function(event){
     if(info.type === "move"){
         insertInColumn(info.col, 'yellow');
         my_turn = true;
-        document.getElementById("gameinfo").innerHTML = "your turn";
+        document.getElementById("gameinfo").innerHTML = "Your Turn";
     }
 };
 
