@@ -11,8 +11,8 @@
     text-align: center;
 }
 
-h2::before::after{
-    content: "\1F525"
+h2::before,h2::after{
+    content: "\1F525";
 }
 
 #rules{
