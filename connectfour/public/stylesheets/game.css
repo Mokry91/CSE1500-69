@@ -18,6 +18,22 @@ a:link {
   a:hover {
     color: black;
   }
+
+  .homeLinkTable{
+      width: 80%;
+  }
+
+.homeLink:active{
+    color: red;
+}
+
+.homeLink::before{
+    content: "\1F431";
+}
+
+.homeLink::after{
+    content: "\1F431";
+}
   
   /* selected link */
   a:active {
@@ -25,9 +41,9 @@ a:link {
   }
 
 #logotitle{
-    width:30%;
-    margin-left:35%;
-    margin-right:35%;
+    width:40%;
+    margin-left:30%;
+    margin-right:30%;
     text-align: center;
 }
 
