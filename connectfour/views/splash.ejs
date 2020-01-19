@@ -6,8 +6,16 @@
 </head>
 <body>
 <main >
-    <img id="tulogo" src="public/images/gay.png"/>
+    <img id="tulogo1" src="public/images/gay.png"/>
     <img id="tulogo2" src="public/images/gay.png"/>
+    <img id="tulogo3" src="public/images/gay.png"/>
+    <img id="tulogo4" src="public/images/gay.png"/>
+    <img id="tulogo5" src="public/images/gay.png"/>
+    <img id="tulogo6" src="public/images/gay.png"/>
+    <img id="tulogo7" src="public/images/gay.png"/>
+    <img id="tulogo8" src="public/images/gay.png"/>
+    <img id="tulogo9" src="public/images/gay.png"/>
+    <img id="tulogo10" src="public/images/gay.png"/>
     <table id="logotitle">
         <tr>
             <th>
@@ -22,6 +30,16 @@
                 <img class="logo" src="public/images/logo.png" alt="logo">
             </th>
         </tr>
+        <h3 id="stats">
+            <%= gamesInitialised %> 
+            <%if (gamesInitialised != 1) { %>
+                games
+            <% } else { %>
+                game
+            <% } %> initialized, 
+            <%= gamesAborted %> aborted,
+            <%= playersOnline %> players online.
+        </h3>
     </table>
     <div>welcome back for the <span id="cookie"></span>th time</div>
     <section id="rules">
@@ -29,16 +47,7 @@
         <h2> RULES </h2>
         <p>To win Connect Four you must be the first player to get four of your colored checkers in a row either horizontally, vertically or diagonally.</p>
     </section>
-      <h3 id="stats">
-        <%= gamesInitialised %> 
-        <%if (gamesInitialised != 1) { %>
-            games
-        <% } else { %>
-            game
-        <% } %> initialized, 
-        <%= gamesAborted %> aborted,
-        <%= playersOnline %> players online.
-      </h3>
+      <h3 id="stats"></h3>
 </main>
 <form action="/play" method="get">
     <a id="button" href = "/play">
@@ -48,5 +57,14 @@
 
 <script src="jquery/jquery.js"></script>
 <script src="public/scripts/userInfo.js"></script>
+
+<!--
+<script src="javascripts/config.js"></script>
+<script src="javascripts/statuses.js"></script>
+<script src="javascripts/messages.js"></script>
+<script src="javascripts/alphabet.js"></script>
+<script src="javascripts/ui-right.js"></script>
+<script src="javascripts/interactions.js"></script>-->
+<!-- browser parses the code from top to bottom, by now the DOM is built -->
 </body>
 </html>
