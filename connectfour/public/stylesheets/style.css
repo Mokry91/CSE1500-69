@@ -7,33 +7,1115 @@ body{
   font-family: "Footlight MT Light", Times, serif;
 }
 
-
-#tulogo{
+#tulogo1{
   position: absolute;
-  width: 80px;
-  height: auto;
-  left: 70px;
-  top: 70px;
-  animation: move 5s infinite;
+  width: auto;
+  height: 0%;
+  right: 75%;
+  bottom: 59%;
+  z-index: 42069;
+  animation: random1 35s infinite;
 }
 
-@keyframes move {
-  from {left: 70px; top: 70px; width: 80px}
-  50% {left: 50px; top: 500px; width: 180px}
-  to {left: 70px; top: 70px; width: 80px}
+@keyframes random1 {
+  0% {right: 32%; bottom:  29%; height: 0%}
+  1% {right: 24.5%; bottom:  21.5%; height: 15%}
+  2% {right: 32%; bottom:  29%; height: 0%}
+  3% {right: 49%; bottom:  33%; height: 0%}
+  4% {right: 41.5%; bottom:  25.5%; height: 15%}
+  5% {right: 49%; bottom:  33%; height: 0%}
+  6% {right: 34%; bottom:  80%; height: 0%}
+  7% {right: 26.5%; bottom:  72.5%; height: 15%}
+  8% {right: 34%; bottom:  80%; height: 0%}
+  9% {right: 58%; bottom:  48%; height: 0%}
+  10% {right: 50.5%; bottom:  40.5%; height: 15%}
+  11% {right: 58%; bottom:  48%; height: 0%}
+  12% {right: 27%; bottom:  48%; height: 0%}
+  13% {right: 19.5%; bottom:  40.5%; height: 15%}
+  14% {right: 27%; bottom:  48%; height: 0%}
+  15% {right: 38%; bottom:  39%; height: 0%}
+  16% {right: 30.5%; bottom:  31.5%; height: 15%}
+  17% {right: 38%; bottom:  39%; height: 0%}
+  18% {right: 37%; bottom:  59%; height: 0%}
+  19% {right: 29.5%; bottom:  51.5%; height: 15%}
+  20% {right: 37%; bottom:  59%; height: 0%}
+  21% {right: 46%; bottom:  26%; height: 0%}
+  22% {right: 38.5%; bottom:  18.5%; height: 15%}
+  23% {right: 46%; bottom:  26%; height: 0%}
+  24% {right: 73%; bottom:  51%; height: 0%}
+  25% {right: 65.5%; bottom:  43.5%; height: 15%}
+  26% {right: 73%; bottom:  51%; height: 0%}
+  27% {right: 27%; bottom:  44%; height: 0%}
+  28% {right: 19.5%; bottom:  36.5%; height: 15%}
+  29% {right: 27%; bottom:  44%; height: 0%}
+  30% {right: 41%; bottom:  27%; height: 0%}
+  31% {right: 33.5%; bottom:  19.5%; height: 15%}
+  32% {right: 41%; bottom:  27%; height: 0%}
+  33% {right: 51%; bottom:  67%; height: 0%}
+  34% {right: 43.5%; bottom:  59.5%; height: 15%}
+  35% {right: 51%; bottom:  67%; height: 0%}
+  36% {right: 79%; bottom:  77%; height: 0%}
+  37% {right: 71.5%; bottom:  69.5%; height: 15%}
+  38% {right: 79%; bottom:  77%; height: 0%}
+  39% {right: 78%; bottom:  67%; height: 0%}
+  40% {right: 70.5%; bottom:  59.5%; height: 15%}
+  41% {right: 78%; bottom:  67%; height: 0%}
+  42% {right: 65%; bottom:  48%; height: 0%}
+  43% {right: 57.5%; bottom:  40.5%; height: 15%}
+  44% {right: 65%; bottom:  48%; height: 0%}
+  45% {right: 47%; bottom:  56%; height: 0%}
+  46% {right: 39.5%; bottom:  48.5%; height: 15%}
+  47% {right: 47%; bottom:  56%; height: 0%}
+  48% {right: 62%; bottom:  40%; height: 0%}
+  49% {right: 54.5%; bottom:  32.5%; height: 15%}
+  50% {right: 62%; bottom:  40%; height: 0%}
+  51% {right: 57%; bottom:  71%; height: 0%}
+  52% {right: 49.5%; bottom:  63.5%; height: 15%}
+  53% {right: 57%; bottom:  71%; height: 0%}
+  54% {right: 42%; bottom:  79%; height: 0%}
+  55% {right: 34.5%; bottom:  71.5%; height: 15%}
+  56% {right: 42%; bottom:  79%; height: 0%}
+  57% {right: 78%; bottom:  67%; height: 0%}
+  58% {right: 70.5%; bottom:  59.5%; height: 15%}
+  59% {right: 78%; bottom:  67%; height: 0%}
+  60% {right: 78%; bottom:  54%; height: 0%}
+  61% {right: 70.5%; bottom:  46.5%; height: 15%}
+  62% {right: 78%; bottom:  54%; height: 0%}
+  63% {right: 40%; bottom:  30%; height: 0%}
+  64% {right: 32.5%; bottom:  22.5%; height: 15%}
+  65% {right: 40%; bottom:  30%; height: 0%}
+  66% {right: 72%; bottom:  51%; height: 0%}
+  67% {right: 64.5%; bottom:  43.5%; height: 15%}
+  68% {right: 72%; bottom:  51%; height: 0%}
+  69% {right: 73%; bottom:  21%; height: 0%}
+  70% {right: 65.5%; bottom:  13.5%; height: 15%}
+  71% {right: 73%; bottom:  21%; height: 0%}
+  72% {right: 77%; bottom:  30%; height: 0%}
+  73% {right: 69.5%; bottom:  22.5%; height: 15%}
+  74% {right: 77%; bottom:  30%; height: 0%}
+  75% {right: 70%; bottom:  61%; height: 0%}
+  76% {right: 62.5%; bottom:  53.5%; height: 15%}
+  77% {right: 70%; bottom:  61%; height: 0%}
+  78% {right: 50%; bottom:  63%; height: 0%}
+  79% {right: 42.5%; bottom:  55.5%; height: 15%}
+  80% {right: 50%; bottom:  63%; height: 0%}
+  81% {right: 71%; bottom:  57%; height: 0%}
+  82% {right: 63.5%; bottom:  49.5%; height: 15%}
+  83% {right: 71%; bottom:  57%; height: 0%}
+  84% {right: 53%; bottom:  65%; height: 0%}
+  85% {right: 45.5%; bottom:  57.5%; height: 15%}
+  86% {right: 53%; bottom:  65%; height: 0%}
+  87% {right: 57%; bottom:  38%; height: 0%}
+  88% {right: 49.5%; bottom:  30.5%; height: 15%}
+  89% {right: 57%; bottom:  38%; height: 0%}
+  90% {right: 42%; bottom:  39%; height: 0%}
+  91% {right: 34.5%; bottom:  31.5%; height: 15%}
+  92% {right: 42%; bottom:  39%; height: 0%}
+  93% {right: 70%; bottom:  44%; height: 0%}
+  94% {right: 62.5%; bottom:  36.5%; height: 15%}
+  95% {right: 70%; bottom:  44%; height: 0%}
+  96% {right: 43%; bottom:  79%; height: 0%}
+  97% {right: 35.5%; bottom:  71.5%; height: 15%}
+  98% {right: 43%; bottom:  79%; height: 0%}
+  to {right: 43%; bottom:  79%; height: 0%}
 }
 
 #tulogo2{
   position: absolute;
-  width: 80px;
-  height: auto;
-  right: 70px;
-  bottom: 70px;
-  animation: move2 5s infinite;
+  width: auto;
+  height: 0%;
+  right: 75%;
+  bottom: 59%;
+  z-index: 42069;
+  animation: random2 40s infinite;
 }
 
-@keyframes move2 {
-  from {right: 70px; bottom: 70px; width: 80px}
-  50% {right: 50px; bottom: 500px; width: 180px}
-  to {right: 70px; bottom: 70px; width: 80px}
+@keyframes random2 {
+  0% {right: 31%; bottom:  77%; height: 0%}
+  1% {right: 23.5%; bottom:  69.5%; height: 15%}
+  2% {right: 31%; bottom:  77%; height: 0%}
+  3% {right: 48%; bottom:  65%; height: 0%}
+  4% {right: 40.5%; bottom:  57.5%; height: 15%}
+  5% {right: 48%; bottom:  65%; height: 0%}
+  6% {right: 71%; bottom:  50%; height: 0%}
+  7% {right: 63.5%; bottom:  42.5%; height: 15%}
+  8% {right: 71%; bottom:  50%; height: 0%}
+  9% {right: 64%; bottom:  21%; height: 0%}
+  10% {right: 56.5%; bottom:  13.5%; height: 15%}
+  11% {right: 64%; bottom:  21%; height: 0%}
+  12% {right: 23%; bottom:  30%; height: 0%}
+  13% {right: 15.5%; bottom:  22.5%; height: 15%}
+  14% {right: 23%; bottom:  30%; height: 0%}
+  15% {right: 79%; bottom:  74%; height: 0%}
+  16% {right: 71.5%; bottom:  66.5%; height: 15%}
+  17% {right: 79%; bottom:  74%; height: 0%}
+  18% {right: 33%; bottom:  54%; height: 0%}
+  19% {right: 25.5%; bottom:  46.5%; height: 15%}
+  20% {right: 33%; bottom:  54%; height: 0%}
+  21% {right: 41%; bottom:  31%; height: 0%}
+  22% {right: 33.5%; bottom:  23.5%; height: 15%}
+  23% {right: 41%; bottom:  31%; height: 0%}
+  24% {right: 32%; bottom:  49%; height: 0%}
+  25% {right: 24.5%; bottom:  41.5%; height: 15%}
+  26% {right: 32%; bottom:  49%; height: 0%}
+  27% {right: 28%; bottom:  50%; height: 0%}
+  28% {right: 20.5%; bottom:  42.5%; height: 15%}
+  29% {right: 28%; bottom:  50%; height: 0%}
+  30% {right: 32%; bottom:  58%; height: 0%}
+  31% {right: 24.5%; bottom:  50.5%; height: 15%}
+  32% {right: 32%; bottom:  58%; height: 0%}
+  33% {right: 55%; bottom:  58%; height: 0%}
+  34% {right: 47.5%; bottom:  50.5%; height: 15%}
+  35% {right: 55%; bottom:  58%; height: 0%}
+  36% {right: 76%; bottom:  39%; height: 0%}
+  37% {right: 68.5%; bottom:  31.5%; height: 15%}
+  38% {right: 76%; bottom:  39%; height: 0%}
+  39% {right: 58%; bottom:  75%; height: 0%}
+  40% {right: 50.5%; bottom:  67.5%; height: 15%}
+  41% {right: 58%; bottom:  75%; height: 0%}
+  42% {right: 64%; bottom:  74%; height: 0%}
+  43% {right: 56.5%; bottom:  66.5%; height: 15%}
+  44% {right: 64%; bottom:  74%; height: 0%}
+  45% {right: 32%; bottom:  57%; height: 0%}
+  46% {right: 24.5%; bottom:  49.5%; height: 15%}
+  47% {right: 32%; bottom:  57%; height: 0%}
+  48% {right: 29%; bottom:  62%; height: 0%}
+  49% {right: 21.5%; bottom:  54.5%; height: 15%}
+  50% {right: 29%; bottom:  62%; height: 0%}
+  51% {right: 79%; bottom:  20%; height: 0%}
+  52% {right: 71.5%; bottom:  12.5%; height: 15%}
+  53% {right: 79%; bottom:  20%; height: 0%}
+  54% {right: 48%; bottom:  23%; height: 0%}
+  55% {right: 40.5%; bottom:  15.5%; height: 15%}
+  56% {right: 48%; bottom:  23%; height: 0%}
+  57% {right: 71%; bottom:  74%; height: 0%}
+  58% {right: 63.5%; bottom:  66.5%; height: 15%}
+  59% {right: 71%; bottom:  74%; height: 0%}
+  60% {right: 65%; bottom:  26%; height: 0%}
+  61% {right: 57.5%; bottom:  18.5%; height: 15%}
+  62% {right: 65%; bottom:  26%; height: 0%}
+  63% {right: 75%; bottom:  45%; height: 0%}
+  64% {right: 67.5%; bottom:  37.5%; height: 15%}
+  65% {right: 75%; bottom:  45%; height: 0%}
+  66% {right: 53%; bottom:  43%; height: 0%}
+  67% {right: 45.5%; bottom:  35.5%; height: 15%}
+  68% {right: 53%; bottom:  43%; height: 0%}
+  69% {right: 50%; bottom:  65%; height: 0%}
+  70% {right: 42.5%; bottom:  57.5%; height: 15%}
+  71% {right: 50%; bottom:  65%; height: 0%}
+  72% {right: 80%; bottom:  66%; height: 0%}
+  73% {right: 72.5%; bottom:  58.5%; height: 15%}
+  74% {right: 80%; bottom:  66%; height: 0%}
+  75% {right: 35%; bottom:  32%; height: 0%}
+  76% {right: 27.5%; bottom:  24.5%; height: 15%}
+  77% {right: 35%; bottom:  32%; height: 0%}
+  78% {right: 33%; bottom:  62%; height: 0%}
+  79% {right: 25.5%; bottom:  54.5%; height: 15%}
+  80% {right: 33%; bottom:  62%; height: 0%}
+  81% {right: 67%; bottom:  71%; height: 0%}
+  82% {right: 59.5%; bottom:  63.5%; height: 15%}
+  83% {right: 67%; bottom:  71%; height: 0%}
+  84% {right: 33%; bottom:  49%; height: 0%}
+  85% {right: 25.5%; bottom:  41.5%; height: 15%}
+  86% {right: 33%; bottom:  49%; height: 0%}
+  87% {right: 78%; bottom:  24%; height: 0%}
+  88% {right: 70.5%; bottom:  16.5%; height: 15%}
+  89% {right: 78%; bottom:  24%; height: 0%}
+  90% {right: 69%; bottom:  45%; height: 0%}
+  91% {right: 61.5%; bottom:  37.5%; height: 15%}
+  92% {right: 69%; bottom:  45%; height: 0%}
+  93% {right: 55%; bottom:  20%; height: 0%}
+  94% {right: 47.5%; bottom:  12.5%; height: 15%}
+  95% {right: 55%; bottom:  20%; height: 0%}
+  96% {right: 78%; bottom:  40%; height: 0%}
+  97% {right: 70.5%; bottom:  32.5%; height: 15%}
+  98% {right: 78%; bottom:  40%; height: 0%}
+}
+#tulogo3{
+  position: absolute;
+  width: auto;
+  height: 0%;
+  right: 75%;
+  bottom: 59%;
+  z-index: 42069;
+  animation: random3 45s infinite;
+}
+
+@keyframes random3 {
+  0% {right: 44%; bottom:  74%; height: 0%}
+  1% {right: 36.5%; bottom:  66.5%; height: 15%}
+  2% {right: 44%; bottom:  74%; height: 0%}
+  3% {right: 24%; bottom:  35%; height: 0%}
+  4% {right: 16.5%; bottom:  27.5%; height: 15%}
+  5% {right: 24%; bottom:  35%; height: 0%}
+  6% {right: 40%; bottom:  62%; height: 0%}
+  7% {right: 32.5%; bottom:  54.5%; height: 15%}
+  8% {right: 40%; bottom:  62%; height: 0%}
+  9% {right: 78%; bottom:  65%; height: 0%}
+  10% {right: 70.5%; bottom:  57.5%; height: 15%}
+  11% {right: 78%; bottom:  65%; height: 0%}
+  12% {right: 80%; bottom:  44%; height: 0%}
+  13% {right: 72.5%; bottom:  36.5%; height: 15%}
+  14% {right: 80%; bottom:  44%; height: 0%}
+  15% {right: 23%; bottom:  50%; height: 0%}
+  16% {right: 15.5%; bottom:  42.5%; height: 15%}
+  17% {right: 23%; bottom:  50%; height: 0%}
+  18% {right: 59%; bottom:  57%; height: 0%}
+  19% {right: 51.5%; bottom:  49.5%; height: 15%}
+  20% {right: 59%; bottom:  57%; height: 0%}
+  21% {right: 20%; bottom:  39%; height: 0%}
+  22% {right: 12.5%; bottom:  31.5%; height: 15%}
+  23% {right: 20%; bottom:  39%; height: 0%}
+  24% {right: 66%; bottom:  53%; height: 0%}
+  25% {right: 58.5%; bottom:  45.5%; height: 15%}
+  26% {right: 66%; bottom:  53%; height: 0%}
+  27% {right: 73%; bottom:  62%; height: 0%}
+  28% {right: 65.5%; bottom:  54.5%; height: 15%}
+  29% {right: 73%; bottom:  62%; height: 0%}
+  30% {right: 40%; bottom:  27%; height: 0%}
+  31% {right: 32.5%; bottom:  19.5%; height: 15%}
+  32% {right: 40%; bottom:  27%; height: 0%}
+  33% {right: 73%; bottom:  54%; height: 0%}
+  34% {right: 65.5%; bottom:  46.5%; height: 15%}
+  35% {right: 73%; bottom:  54%; height: 0%}
+  36% {right: 31%; bottom:  71%; height: 0%}
+  37% {right: 23.5%; bottom:  63.5%; height: 15%}
+  38% {right: 31%; bottom:  71%; height: 0%}
+  39% {right: 47%; bottom:  53%; height: 0%}
+  40% {right: 39.5%; bottom:  45.5%; height: 15%}
+  41% {right: 47%; bottom:  53%; height: 0%}
+  42% {right: 24%; bottom:  53%; height: 0%}
+  43% {right: 16.5%; bottom:  45.5%; height: 15%}
+  44% {right: 24%; bottom:  53%; height: 0%}
+  45% {right: 49%; bottom:  27%; height: 0%}
+  46% {right: 41.5%; bottom:  19.5%; height: 15%}
+  47% {right: 49%; bottom:  27%; height: 0%}
+  48% {right: 45%; bottom:  23%; height: 0%}
+  49% {right: 37.5%; bottom:  15.5%; height: 15%}
+  50% {right: 45%; bottom:  23%; height: 0%}
+  51% {right: 76%; bottom:  58%; height: 0%}
+  52% {right: 68.5%; bottom:  50.5%; height: 15%}
+  53% {right: 76%; bottom:  58%; height: 0%}
+  54% {right: 56%; bottom:  22%; height: 0%}
+  55% {right: 48.5%; bottom:  14.5%; height: 15%}
+  56% {right: 56%; bottom:  22%; height: 0%}
+  57% {right: 63%; bottom:  65%; height: 0%}
+  58% {right: 55.5%; bottom:  57.5%; height: 15%}
+  59% {right: 63%; bottom:  65%; height: 0%}
+  60% {right: 49%; bottom:  50%; height: 0%}
+  61% {right: 41.5%; bottom:  42.5%; height: 15%}
+  62% {right: 49%; bottom:  50%; height: 0%}
+  63% {right: 39%; bottom:  77%; height: 0%}
+  64% {right: 31.5%; bottom:  69.5%; height: 15%}
+  65% {right: 39%; bottom:  77%; height: 0%}
+  66% {right: 54%; bottom:  61%; height: 0%}
+  67% {right: 46.5%; bottom:  53.5%; height: 15%}
+  68% {right: 54%; bottom:  61%; height: 0%}
+  69% {right: 44%; bottom:  65%; height: 0%}
+  70% {right: 36.5%; bottom:  57.5%; height: 15%}
+  71% {right: 44%; bottom:  65%; height: 0%}
+  72% {right: 60%; bottom:  57%; height: 0%}
+  73% {right: 52.5%; bottom:  49.5%; height: 15%}
+  74% {right: 60%; bottom:  57%; height: 0%}
+  75% {right: 69%; bottom:  66%; height: 0%}
+  76% {right: 61.5%; bottom:  58.5%; height: 15%}
+  77% {right: 69%; bottom:  66%; height: 0%}
+  78% {right: 64%; bottom:  34%; height: 0%}
+  79% {right: 56.5%; bottom:  26.5%; height: 15%}
+  80% {right: 64%; bottom:  34%; height: 0%}
+  81% {right: 27%; bottom:  39%; height: 0%}
+  82% {right: 19.5%; bottom:  31.5%; height: 15%}
+  83% {right: 27%; bottom:  39%; height: 0%}
+  84% {right: 46%; bottom:  39%; height: 0%}
+  85% {right: 38.5%; bottom:  31.5%; height: 15%}
+  86% {right: 46%; bottom:  39%; height: 0%}
+  87% {right: 79%; bottom:  30%; height: 0%}
+  88% {right: 71.5%; bottom:  22.5%; height: 15%}
+  89% {right: 79%; bottom:  30%; height: 0%}
+  90% {right: 22%; bottom:  52%; height: 0%}
+  91% {right: 14.5%; bottom:  44.5%; height: 15%}
+  92% {right: 22%; bottom:  52%; height: 0%}
+  93% {right: 80%; bottom:  65%; height: 0%}
+  94% {right: 72.5%; bottom:  57.5%; height: 15%}
+  95% {right: 80%; bottom:  65%; height: 0%}
+  96% {right: 55%; bottom:  38%; height: 0%}
+  97% {right: 47.5%; bottom:  30.5%; height: 15%}
+  98% {right: 55%; bottom:  38%; height: 0%}
+}
+#tulogo4{
+  position: absolute;
+  width: auto;
+  height: 0%;
+  right: 75%;
+  bottom: 59%;
+  z-index: 42069;
+  animation: random4 50s infinite;
+}
+
+@keyframes random4 {
+  0% {right: 56%; bottom:  24%; height: 0%}
+  1% {right: 48.5%; bottom:  16.5%; height: 15%}
+  2% {right: 56%; bottom:  24%; height: 0%}
+  3% {right: 68%; bottom:  49%; height: 0%}
+  4% {right: 60.5%; bottom:  41.5%; height: 15%}
+  5% {right: 68%; bottom:  49%; height: 0%}
+  6% {right: 79%; bottom:  80%; height: 0%}
+  7% {right: 71.5%; bottom:  72.5%; height: 15%}
+  8% {right: 79%; bottom:  80%; height: 0%}
+  9% {right: 21%; bottom:  55%; height: 0%}
+  10% {right: 13.5%; bottom:  47.5%; height: 15%}
+  11% {right: 21%; bottom:  55%; height: 0%}
+  12% {right: 27%; bottom:  66%; height: 0%}
+  13% {right: 19.5%; bottom:  58.5%; height: 15%}
+  14% {right: 27%; bottom:  66%; height: 0%}
+  15% {right: 42%; bottom:  30%; height: 0%}
+  16% {right: 34.5%; bottom:  22.5%; height: 15%}
+  17% {right: 42%; bottom:  30%; height: 0%}
+  18% {right: 28%; bottom:  31%; height: 0%}
+  19% {right: 20.5%; bottom:  23.5%; height: 15%}
+  20% {right: 28%; bottom:  31%; height: 0%}
+  21% {right: 56%; bottom:  35%; height: 0%}
+  22% {right: 48.5%; bottom:  27.5%; height: 15%}
+  23% {right: 56%; bottom:  35%; height: 0%}
+  24% {right: 68%; bottom:  40%; height: 0%}
+  25% {right: 60.5%; bottom:  32.5%; height: 15%}
+  26% {right: 68%; bottom:  40%; height: 0%}
+  27% {right: 44%; bottom:  20%; height: 0%}
+  28% {right: 36.5%; bottom:  12.5%; height: 15%}
+  29% {right: 44%; bottom:  20%; height: 0%}
+  30% {right: 48%; bottom:  22%; height: 0%}
+  31% {right: 40.5%; bottom:  14.5%; height: 15%}
+  32% {right: 48%; bottom:  22%; height: 0%}
+  33% {right: 38%; bottom:  51%; height: 0%}
+  34% {right: 30.5%; bottom:  43.5%; height: 15%}
+  35% {right: 38%; bottom:  51%; height: 0%}
+  36% {right: 38%; bottom:  59%; height: 0%}
+  37% {right: 30.5%; bottom:  51.5%; height: 15%}
+  38% {right: 38%; bottom:  59%; height: 0%}
+  39% {right: 40%; bottom:  39%; height: 0%}
+  40% {right: 32.5%; bottom:  31.5%; height: 15%}
+  41% {right: 40%; bottom:  39%; height: 0%}
+  42% {right: 45%; bottom:  44%; height: 0%}
+  43% {right: 37.5%; bottom:  36.5%; height: 15%}
+  44% {right: 45%; bottom:  44%; height: 0%}
+  45% {right: 59%; bottom:  30%; height: 0%}
+  46% {right: 51.5%; bottom:  22.5%; height: 15%}
+  47% {right: 59%; bottom:  30%; height: 0%}
+  48% {right: 34%; bottom:  61%; height: 0%}
+  49% {right: 26.5%; bottom:  53.5%; height: 15%}
+  50% {right: 34%; bottom:  61%; height: 0%}
+  51% {right: 45%; bottom:  34%; height: 0%}
+  52% {right: 37.5%; bottom:  26.5%; height: 15%}
+  53% {right: 45%; bottom:  34%; height: 0%}
+  54% {right: 24%; bottom:  70%; height: 0%}
+  55% {right: 16.5%; bottom:  62.5%; height: 15%}
+  56% {right: 24%; bottom:  70%; height: 0%}
+  57% {right: 64%; bottom:  33%; height: 0%}
+  58% {right: 56.5%; bottom:  25.5%; height: 15%}
+  59% {right: 64%; bottom:  33%; height: 0%}
+  60% {right: 61%; bottom:  70%; height: 0%}
+  61% {right: 53.5%; bottom:  62.5%; height: 15%}
+  62% {right: 61%; bottom:  70%; height: 0%}
+  63% {right: 47%; bottom:  23%; height: 0%}
+  64% {right: 39.5%; bottom:  15.5%; height: 15%}
+  65% {right: 47%; bottom:  23%; height: 0%}
+  66% {right: 30%; bottom:  23%; height: 0%}
+  67% {right: 22.5%; bottom:  15.5%; height: 15%}
+  68% {right: 30%; bottom:  23%; height: 0%}
+  69% {right: 74%; bottom:  24%; height: 0%}
+  70% {right: 66.5%; bottom:  16.5%; height: 15%}
+  71% {right: 74%; bottom:  24%; height: 0%}
+  72% {right: 39%; bottom:  32%; height: 0%}
+  73% {right: 31.5%; bottom:  24.5%; height: 15%}
+  74% {right: 39%; bottom:  32%; height: 0%}
+  75% {right: 67%; bottom:  66%; height: 0%}
+  76% {right: 59.5%; bottom:  58.5%; height: 15%}
+  77% {right: 67%; bottom:  66%; height: 0%}
+  78% {right: 74%; bottom:  37%; height: 0%}
+  79% {right: 66.5%; bottom:  29.5%; height: 15%}
+  80% {right: 74%; bottom:  37%; height: 0%}
+  81% {right: 63%; bottom:  72%; height: 0%}
+  82% {right: 55.5%; bottom:  64.5%; height: 15%}
+  83% {right: 63%; bottom:  72%; height: 0%}
+  84% {right: 65%; bottom:  42%; height: 0%}
+  85% {right: 57.5%; bottom:  34.5%; height: 15%}
+  86% {right: 65%; bottom:  42%; height: 0%}
+  87% {right: 31%; bottom:  44%; height: 0%}
+  88% {right: 23.5%; bottom:  36.5%; height: 15%}
+  89% {right: 31%; bottom:  44%; height: 0%}
+  90% {right: 37%; bottom:  21%; height: 0%}
+  91% {right: 29.5%; bottom:  13.5%; height: 15%}
+  92% {right: 37%; bottom:  21%; height: 0%}
+  93% {right: 58%; bottom:  69%; height: 0%}
+  94% {right: 50.5%; bottom:  61.5%; height: 15%}
+  95% {right: 58%; bottom:  69%; height: 0%}
+  96% {right: 38%; bottom:  61%; height: 0%}
+  97% {right: 30.5%; bottom:  53.5%; height: 15%}
+  98% {right: 38%; bottom:  61%; height: 0%}
+}
+#tulogo5{
+  position: absolute;
+  width: auto;
+  height: 0%;
+  right: 75%;
+  bottom: 59%;
+  z-index: 42069;
+  animation: random5 55s infinite;
+}
+
+@keyframes random5 {
+  0% {right: 40%; bottom:  53%; height: 0%}
+  1% {right: 32.5%; bottom:  45.5%; height: 15%}
+  2% {right: 40%; bottom:  53%; height: 0%}
+  3% {right: 24%; bottom:  35%; height: 0%}
+  4% {right: 16.5%; bottom:  27.5%; height: 15%}
+  5% {right: 24%; bottom:  35%; height: 0%}
+  6% {right: 32%; bottom:  26%; height: 0%}
+  7% {right: 24.5%; bottom:  18.5%; height: 15%}
+  8% {right: 32%; bottom:  26%; height: 0%}
+  9% {right: 39%; bottom:  73%; height: 0%}
+  10% {right: 31.5%; bottom:  65.5%; height: 15%}
+  11% {right: 39%; bottom:  73%; height: 0%}
+  12% {right: 77%; bottom:  66%; height: 0%}
+  13% {right: 69.5%; bottom:  58.5%; height: 15%}
+  14% {right: 77%; bottom:  66%; height: 0%}
+  15% {right: 21%; bottom:  32%; height: 0%}
+  16% {right: 13.5%; bottom:  24.5%; height: 15%}
+  17% {right: 21%; bottom:  32%; height: 0%}
+  18% {right: 57%; bottom:  62%; height: 0%}
+  19% {right: 49.5%; bottom:  54.5%; height: 15%}
+  20% {right: 57%; bottom:  62%; height: 0%}
+  21% {right: 54%; bottom:  61%; height: 0%}
+  22% {right: 46.5%; bottom:  53.5%; height: 15%}
+  23% {right: 54%; bottom:  61%; height: 0%}
+  24% {right: 27%; bottom:  28%; height: 0%}
+  25% {right: 19.5%; bottom:  20.5%; height: 15%}
+  26% {right: 27%; bottom:  28%; height: 0%}
+  27% {right: 46%; bottom:  44%; height: 0%}
+  28% {right: 38.5%; bottom:  36.5%; height: 15%}
+  29% {right: 46%; bottom:  44%; height: 0%}
+  30% {right: 46%; bottom:  38%; height: 0%}
+  31% {right: 38.5%; bottom:  30.5%; height: 15%}
+  32% {right: 46%; bottom:  38%; height: 0%}
+  33% {right: 64%; bottom:  24%; height: 0%}
+  34% {right: 56.5%; bottom:  16.5%; height: 15%}
+  35% {right: 64%; bottom:  24%; height: 0%}
+  36% {right: 65%; bottom:  51%; height: 0%}
+  37% {right: 57.5%; bottom:  43.5%; height: 15%}
+  38% {right: 65%; bottom:  51%; height: 0%}
+  39% {right: 62%; bottom:  73%; height: 0%}
+  40% {right: 54.5%; bottom:  65.5%; height: 15%}
+  41% {right: 62%; bottom:  73%; height: 0%}
+  42% {right: 71%; bottom:  26%; height: 0%}
+  43% {right: 63.5%; bottom:  18.5%; height: 15%}
+  44% {right: 71%; bottom:  26%; height: 0%}
+  45% {right: 24%; bottom:  29%; height: 0%}
+  46% {right: 16.5%; bottom:  21.5%; height: 15%}
+  47% {right: 24%; bottom:  29%; height: 0%}
+  48% {right: 40%; bottom:  46%; height: 0%}
+  49% {right: 32.5%; bottom:  38.5%; height: 15%}
+  50% {right: 40%; bottom:  46%; height: 0%}
+  51% {right: 23%; bottom:  73%; height: 0%}
+  52% {right: 15.5%; bottom:  65.5%; height: 15%}
+  53% {right: 23%; bottom:  73%; height: 0%}
+  54% {right: 20%; bottom:  64%; height: 0%}
+  55% {right: 12.5%; bottom:  56.5%; height: 15%}
+  56% {right: 20%; bottom:  64%; height: 0%}
+  57% {right: 43%; bottom:  74%; height: 0%}
+  58% {right: 35.5%; bottom:  66.5%; height: 15%}
+  59% {right: 43%; bottom:  74%; height: 0%}
+  60% {right: 32%; bottom:  46%; height: 0%}
+  61% {right: 24.5%; bottom:  38.5%; height: 15%}
+  62% {right: 32%; bottom:  46%; height: 0%}
+  63% {right: 21%; bottom:  74%; height: 0%}
+  64% {right: 13.5%; bottom:  66.5%; height: 15%}
+  65% {right: 21%; bottom:  74%; height: 0%}
+  66% {right: 77%; bottom:  35%; height: 0%}
+  67% {right: 69.5%; bottom:  27.5%; height: 15%}
+  68% {right: 77%; bottom:  35%; height: 0%}
+  69% {right: 32%; bottom:  21%; height: 0%}
+  70% {right: 24.5%; bottom:  13.5%; height: 15%}
+  71% {right: 32%; bottom:  21%; height: 0%}
+  72% {right: 50%; bottom:  80%; height: 0%}
+  73% {right: 42.5%; bottom:  72.5%; height: 15%}
+  74% {right: 50%; bottom:  80%; height: 0%}
+  75% {right: 50%; bottom:  36%; height: 0%}
+  76% {right: 42.5%; bottom:  28.5%; height: 15%}
+  77% {right: 50%; bottom:  36%; height: 0%}
+  78% {right: 36%; bottom:  22%; height: 0%}
+  79% {right: 28.5%; bottom:  14.5%; height: 15%}
+  80% {right: 36%; bottom:  22%; height: 0%}
+  81% {right: 27%; bottom:  73%; height: 0%}
+  82% {right: 19.5%; bottom:  65.5%; height: 15%}
+  83% {right: 27%; bottom:  73%; height: 0%}
+  84% {right: 72%; bottom:  51%; height: 0%}
+  85% {right: 64.5%; bottom:  43.5%; height: 15%}
+  86% {right: 72%; bottom:  51%; height: 0%}
+  87% {right: 24%; bottom:  42%; height: 0%}
+  88% {right: 16.5%; bottom:  34.5%; height: 15%}
+  89% {right: 24%; bottom:  42%; height: 0%}
+  90% {right: 57%; bottom:  57%; height: 0%}
+  91% {right: 49.5%; bottom:  49.5%; height: 15%}
+  92% {right: 57%; bottom:  57%; height: 0%}
+  93% {right: 59%; bottom:  66%; height: 0%}
+  94% {right: 51.5%; bottom:  58.5%; height: 15%}
+  95% {right: 59%; bottom:  66%; height: 0%}
+  96% {right: 59%; bottom:  73%; height: 0%}
+  97% {right: 51.5%; bottom:  65.5%; height: 15%}
+  98% {right: 59%; bottom:  73%; height: 0%}
+}
+#tulogo6{
+  position: absolute;
+  width: auto;
+  height: 0%;
+  right: 75%;
+  bottom: 59%;
+  z-index: 42069;
+  animation: random 60s infinite;
+}
+
+@keyframes random6 {
+  0% {right: 24%; bottom:  56%; height: 0%}
+  1% {right: 16.5%; bottom:  48.5%; height: 15%}
+  2% {right: 24%; bottom:  56%; height: 0%}
+  3% {right: 61%; bottom:  23%; height: 0%}
+  4% {right: 53.5%; bottom:  15.5%; height: 15%}
+  5% {right: 61%; bottom:  23%; height: 0%}
+  6% {right: 65%; bottom:  64%; height: 0%}
+  7% {right: 57.5%; bottom:  56.5%; height: 15%}
+  8% {right: 65%; bottom:  64%; height: 0%}
+  9% {right: 70%; bottom:  22%; height: 0%}
+  10% {right: 62.5%; bottom:  14.5%; height: 15%}
+  11% {right: 70%; bottom:  22%; height: 0%}
+  12% {right: 29%; bottom:  35%; height: 0%}
+  13% {right: 21.5%; bottom:  27.5%; height: 15%}
+  14% {right: 29%; bottom:  35%; height: 0%}
+  15% {right: 31%; bottom:  59%; height: 0%}
+  16% {right: 23.5%; bottom:  51.5%; height: 15%}
+  17% {right: 31%; bottom:  59%; height: 0%}
+  18% {right: 40%; bottom:  76%; height: 0%}
+  19% {right: 32.5%; bottom:  68.5%; height: 15%}
+  20% {right: 40%; bottom:  76%; height: 0%}
+  21% {right: 23%; bottom:  26%; height: 0%}
+  22% {right: 15.5%; bottom:  18.5%; height: 15%}
+  23% {right: 23%; bottom:  26%; height: 0%}
+  24% {right: 57%; bottom:  54%; height: 0%}
+  25% {right: 49.5%; bottom:  46.5%; height: 15%}
+  26% {right: 57%; bottom:  54%; height: 0%}
+  27% {right: 70%; bottom:  35%; height: 0%}
+  28% {right: 62.5%; bottom:  27.5%; height: 15%}
+  29% {right: 70%; bottom:  35%; height: 0%}
+  30% {right: 73%; bottom:  70%; height: 0%}
+  31% {right: 65.5%; bottom:  62.5%; height: 15%}
+  32% {right: 73%; bottom:  70%; height: 0%}
+  33% {right: 67%; bottom:  38%; height: 0%}
+  34% {right: 59.5%; bottom:  30.5%; height: 15%}
+  35% {right: 67%; bottom:  38%; height: 0%}
+  36% {right: 61%; bottom:  78%; height: 0%}
+  37% {right: 53.5%; bottom:  70.5%; height: 15%}
+  38% {right: 61%; bottom:  78%; height: 0%}
+  39% {right: 64%; bottom:  45%; height: 0%}
+  40% {right: 56.5%; bottom:  37.5%; height: 15%}
+  41% {right: 64%; bottom:  45%; height: 0%}
+  42% {right: 80%; bottom:  69%; height: 0%}
+  43% {right: 72.5%; bottom:  61.5%; height: 15%}
+  44% {right: 80%; bottom:  69%; height: 0%}
+  45% {right: 51%; bottom:  29%; height: 0%}
+  46% {right: 43.5%; bottom:  21.5%; height: 15%}
+  47% {right: 51%; bottom:  29%; height: 0%}
+  48% {right: 20%; bottom:  75%; height: 0%}
+  49% {right: 12.5%; bottom:  67.5%; height: 15%}
+  50% {right: 20%; bottom:  75%; height: 0%}
+  51% {right: 20%; bottom:  40%; height: 0%}
+  52% {right: 12.5%; bottom:  32.5%; height: 15%}
+  53% {right: 20%; bottom:  40%; height: 0%}
+  54% {right: 62%; bottom:  75%; height: 0%}
+  55% {right: 54.5%; bottom:  67.5%; height: 15%}
+  56% {right: 62%; bottom:  75%; height: 0%}
+  57% {right: 54%; bottom:  44%; height: 0%}
+  58% {right: 46.5%; bottom:  36.5%; height: 15%}
+  59% {right: 54%; bottom:  44%; height: 0%}
+  60% {right: 20%; bottom:  44%; height: 0%}
+  61% {right: 12.5%; bottom:  36.5%; height: 15%}
+  62% {right: 20%; bottom:  44%; height: 0%}
+  63% {right: 71%; bottom:  47%; height: 0%}
+  64% {right: 63.5%; bottom:  39.5%; height: 15%}
+  65% {right: 71%; bottom:  47%; height: 0%}
+  66% {right: 30%; bottom:  34%; height: 0%}
+  67% {right: 22.5%; bottom:  26.5%; height: 15%}
+  68% {right: 30%; bottom:  34%; height: 0%}
+  69% {right: 40%; bottom:  57%; height: 0%}
+  70% {right: 32.5%; bottom:  49.5%; height: 15%}
+  71% {right: 40%; bottom:  57%; height: 0%}
+  72% {right: 76%; bottom:  79%; height: 0%}
+  73% {right: 68.5%; bottom:  71.5%; height: 15%}
+  74% {right: 76%; bottom:  79%; height: 0%}
+  75% {right: 24%; bottom:  47%; height: 0%}
+  76% {right: 16.5%; bottom:  39.5%; height: 15%}
+  77% {right: 24%; bottom:  47%; height: 0%}
+  78% {right: 28%; bottom:  36%; height: 0%}
+  79% {right: 20.5%; bottom:  28.5%; height: 15%}
+  80% {right: 28%; bottom:  36%; height: 0%}
+  81% {right: 55%; bottom:  39%; height: 0%}
+  82% {right: 47.5%; bottom:  31.5%; height: 15%}
+  83% {right: 55%; bottom:  39%; height: 0%}
+  84% {right: 41%; bottom:  76%; height: 0%}
+  85% {right: 33.5%; bottom:  68.5%; height: 15%}
+  86% {right: 41%; bottom:  76%; height: 0%}
+  87% {right: 50%; bottom:  22%; height: 0%}
+  88% {right: 42.5%; bottom:  14.5%; height: 15%}
+  89% {right: 50%; bottom:  22%; height: 0%}
+  90% {right: 43%; bottom:  26%; height: 0%}
+  91% {right: 35.5%; bottom:  18.5%; height: 15%}
+  92% {right: 43%; bottom:  26%; height: 0%}
+  93% {right: 56%; bottom:  51%; height: 0%}
+  94% {right: 48.5%; bottom:  43.5%; height: 15%}
+  95% {right: 56%; bottom:  51%; height: 0%}
+  96% {right: 53%; bottom:  54%; height: 0%}
+  97% {right: 45.5%; bottom:  46.5%; height: 15%}
+  98% {right: 53%; bottom:  54%; height: 0%}
+}
+#tulogo7{
+  position: absolute;
+  width: auto;
+  height: 0%;
+  right: 75%;
+  bottom: 59%;
+  z-index: 42069;
+  animation: random7 65s infinite;
+}
+
+@keyframes random7 {
+  0% {right: 20%; bottom:  46%; height: 0%}
+  1% {right: 12.5%; bottom:  38.5%; height: 15%}
+  2% {right: 20%; bottom:  46%; height: 0%}
+  3% {right: 71%; bottom:  24%; height: 0%}
+  4% {right: 63.5%; bottom:  16.5%; height: 15%}
+  5% {right: 71%; bottom:  24%; height: 0%}
+  6% {right: 22%; bottom:  77%; height: 0%}
+  7% {right: 14.5%; bottom:  69.5%; height: 15%}
+  8% {right: 22%; bottom:  77%; height: 0%}
+  9% {right: 60%; bottom:  66%; height: 0%}
+  10% {right: 52.5%; bottom:  58.5%; height: 15%}
+  11% {right: 60%; bottom:  66%; height: 0%}
+  12% {right: 69%; bottom:  52%; height: 0%}
+  13% {right: 61.5%; bottom:  44.5%; height: 15%}
+  14% {right: 69%; bottom:  52%; height: 0%}
+  15% {right: 79%; bottom:  47%; height: 0%}
+  16% {right: 71.5%; bottom:  39.5%; height: 15%}
+  17% {right: 79%; bottom:  47%; height: 0%}
+  18% {right: 24%; bottom:  77%; height: 0%}
+  19% {right: 16.5%; bottom:  69.5%; height: 15%}
+  20% {right: 24%; bottom:  77%; height: 0%}
+  21% {right: 68%; bottom:  27%; height: 0%}
+  22% {right: 60.5%; bottom:  19.5%; height: 15%}
+  23% {right: 68%; bottom:  27%; height: 0%}
+  24% {right: 59%; bottom:  41%; height: 0%}
+  25% {right: 51.5%; bottom:  33.5%; height: 15%}
+  26% {right: 59%; bottom:  41%; height: 0%}
+  27% {right: 51%; bottom:  46%; height: 0%}
+  28% {right: 43.5%; bottom:  38.5%; height: 15%}
+  29% {right: 51%; bottom:  46%; height: 0%}
+  30% {right: 54%; bottom:  46%; height: 0%}
+  31% {right: 46.5%; bottom:  38.5%; height: 15%}
+  32% {right: 54%; bottom:  46%; height: 0%}
+  33% {right: 61%; bottom:  30%; height: 0%}
+  34% {right: 53.5%; bottom:  22.5%; height: 15%}
+  35% {right: 61%; bottom:  30%; height: 0%}
+  36% {right: 23%; bottom:  35%; height: 0%}
+  37% {right: 15.5%; bottom:  27.5%; height: 15%}
+  38% {right: 23%; bottom:  35%; height: 0%}
+  39% {right: 43%; bottom:  47%; height: 0%}
+  40% {right: 35.5%; bottom:  39.5%; height: 15%}
+  41% {right: 43%; bottom:  47%; height: 0%}
+  42% {right: 48%; bottom:  68%; height: 0%}
+  43% {right: 40.5%; bottom:  60.5%; height: 15%}
+  44% {right: 48%; bottom:  68%; height: 0%}
+  45% {right: 26%; bottom:  77%; height: 0%}
+  46% {right: 18.5%; bottom:  69.5%; height: 15%}
+  47% {right: 26%; bottom:  77%; height: 0%}
+  48% {right: 75%; bottom:  67%; height: 0%}
+  49% {right: 67.5%; bottom:  59.5%; height: 15%}
+  50% {right: 75%; bottom:  67%; height: 0%}
+  51% {right: 51%; bottom:  33%; height: 0%}
+  52% {right: 43.5%; bottom:  25.5%; height: 15%}
+  53% {right: 51%; bottom:  33%; height: 0%}
+  54% {right: 27%; bottom:  48%; height: 0%}
+  55% {right: 19.5%; bottom:  40.5%; height: 15%}
+  56% {right: 27%; bottom:  48%; height: 0%}
+  57% {right: 39%; bottom:  34%; height: 0%}
+  58% {right: 31.5%; bottom:  26.5%; height: 15%}
+  59% {right: 39%; bottom:  34%; height: 0%}
+  60% {right: 53%; bottom:  43%; height: 0%}
+  61% {right: 45.5%; bottom:  35.5%; height: 15%}
+  62% {right: 53%; bottom:  43%; height: 0%}
+  63% {right: 47%; bottom:  61%; height: 0%}
+  64% {right: 39.5%; bottom:  53.5%; height: 15%}
+  65% {right: 47%; bottom:  61%; height: 0%}
+  66% {right: 80%; bottom:  41%; height: 0%}
+  67% {right: 72.5%; bottom:  33.5%; height: 15%}
+  68% {right: 80%; bottom:  41%; height: 0%}
+  69% {right: 21%; bottom:  27%; height: 0%}
+  70% {right: 13.5%; bottom:  19.5%; height: 15%}
+  71% {right: 21%; bottom:  27%; height: 0%}
+  72% {right: 72%; bottom:  70%; height: 0%}
+  73% {right: 64.5%; bottom:  62.5%; height: 15%}
+  74% {right: 72%; bottom:  70%; height: 0%}
+  75% {right: 31%; bottom:  51%; height: 0%}
+  76% {right: 23.5%; bottom:  43.5%; height: 15%}
+  77% {right: 31%; bottom:  51%; height: 0%}
+  78% {right: 39%; bottom:  23%; height: 0%}
+  79% {right: 31.5%; bottom:  15.5%; height: 15%}
+  80% {right: 39%; bottom:  23%; height: 0%}
+  81% {right: 35%; bottom:  49%; height: 0%}
+  82% {right: 27.5%; bottom:  41.5%; height: 15%}
+  83% {right: 35%; bottom:  49%; height: 0%}
+  84% {right: 41%; bottom:  68%; height: 0%}
+  85% {right: 33.5%; bottom:  60.5%; height: 15%}
+  86% {right: 41%; bottom:  68%; height: 0%}
+  87% {right: 52%; bottom:  30%; height: 0%}
+  88% {right: 44.5%; bottom:  22.5%; height: 15%}
+  89% {right: 52%; bottom:  30%; height: 0%}
+  90% {right: 69%; bottom:  33%; height: 0%}
+  91% {right: 61.5%; bottom:  25.5%; height: 15%}
+  92% {right: 69%; bottom:  33%; height: 0%}
+  93% {right: 51%; bottom:  65%; height: 0%}
+  94% {right: 43.5%; bottom:  57.5%; height: 15%}
+  95% {right: 51%; bottom:  65%; height: 0%}
+  96% {right: 40%; bottom:  67%; height: 0%}
+  97% {right: 32.5%; bottom:  59.5%; height: 15%}
+  98% {right: 40%; bottom:  67%; height: 0%}
+}
+#tulogo8{
+  position: absolute;
+  width: auto;
+  height: 0%;
+  right: 75%;
+  bottom: 59%;
+  z-index: 42069;
+  animation: random8 70s infinite;
+}
+
+@keyframes random8 {
+  0% {right: 62%; bottom:  46%; height: 0%}
+  1% {right: 54.5%; bottom:  38.5%; height: 15%}
+  2% {right: 62%; bottom:  46%; height: 0%}
+  3% {right: 50%; bottom:  20%; height: 0%}
+  4% {right: 42.5%; bottom:  12.5%; height: 15%}
+  5% {right: 50%; bottom:  20%; height: 0%}
+  6% {right: 75%; bottom:  41%; height: 0%}
+  7% {right: 67.5%; bottom:  33.5%; height: 15%}
+  8% {right: 75%; bottom:  41%; height: 0%}
+  9% {right: 35%; bottom:  31%; height: 0%}
+  10% {right: 27.5%; bottom:  23.5%; height: 15%}
+  11% {right: 35%; bottom:  31%; height: 0%}
+  12% {right: 48%; bottom:  23%; height: 0%}
+  13% {right: 40.5%; bottom:  15.5%; height: 15%}
+  14% {right: 48%; bottom:  23%; height: 0%}
+  15% {right: 56%; bottom:  71%; height: 0%}
+  16% {right: 48.5%; bottom:  63.5%; height: 15%}
+  17% {right: 56%; bottom:  71%; height: 0%}
+  18% {right: 63%; bottom:  75%; height: 0%}
+  19% {right: 55.5%; bottom:  67.5%; height: 15%}
+  20% {right: 63%; bottom:  75%; height: 0%}
+  21% {right: 40%; bottom:  29%; height: 0%}
+  22% {right: 32.5%; bottom:  21.5%; height: 15%}
+  23% {right: 40%; bottom:  29%; height: 0%}
+  24% {right: 57%; bottom:  80%; height: 0%}
+  25% {right: 49.5%; bottom:  72.5%; height: 15%}
+  26% {right: 57%; bottom:  80%; height: 0%}
+  27% {right: 52%; bottom:  72%; height: 0%}
+  28% {right: 44.5%; bottom:  64.5%; height: 15%}
+  29% {right: 52%; bottom:  72%; height: 0%}
+  30% {right: 29%; bottom:  30%; height: 0%}
+  31% {right: 21.5%; bottom:  22.5%; height: 15%}
+  32% {right: 29%; bottom:  30%; height: 0%}
+  33% {right: 71%; bottom:  31%; height: 0%}
+  34% {right: 63.5%; bottom:  23.5%; height: 15%}
+  35% {right: 71%; bottom:  31%; height: 0%}
+  36% {right: 50%; bottom:  37%; height: 0%}
+  37% {right: 42.5%; bottom:  29.5%; height: 15%}
+  38% {right: 50%; bottom:  37%; height: 0%}
+  39% {right: 67%; bottom:  57%; height: 0%}
+  40% {right: 59.5%; bottom:  49.5%; height: 15%}
+  41% {right: 67%; bottom:  57%; height: 0%}
+  42% {right: 25%; bottom:  32%; height: 0%}
+  43% {right: 17.5%; bottom:  24.5%; height: 15%}
+  44% {right: 25%; bottom:  32%; height: 0%}
+  45% {right: 48%; bottom:  30%; height: 0%}
+  46% {right: 40.5%; bottom:  22.5%; height: 15%}
+  47% {right: 48%; bottom:  30%; height: 0%}
+  48% {right: 67%; bottom:  38%; height: 0%}
+  49% {right: 59.5%; bottom:  30.5%; height: 15%}
+  50% {right: 67%; bottom:  38%; height: 0%}
+  51% {right: 50%; bottom:  37%; height: 0%}
+  52% {right: 42.5%; bottom:  29.5%; height: 15%}
+  53% {right: 50%; bottom:  37%; height: 0%}
+  54% {right: 29%; bottom:  57%; height: 0%}
+  55% {right: 21.5%; bottom:  49.5%; height: 15%}
+  56% {right: 29%; bottom:  57%; height: 0%}
+  57% {right: 70%; bottom:  72%; height: 0%}
+  58% {right: 62.5%; bottom:  64.5%; height: 15%}
+  59% {right: 70%; bottom:  72%; height: 0%}
+  60% {right: 21%; bottom:  35%; height: 0%}
+  61% {right: 13.5%; bottom:  27.5%; height: 15%}
+  62% {right: 21%; bottom:  35%; height: 0%}
+  63% {right: 23%; bottom:  80%; height: 0%}
+  64% {right: 15.5%; bottom:  72.5%; height: 15%}
+  65% {right: 23%; bottom:  80%; height: 0%}
+  66% {right: 38%; bottom:  39%; height: 0%}
+  67% {right: 30.5%; bottom:  31.5%; height: 15%}
+  68% {right: 38%; bottom:  39%; height: 0%}
+  69% {right: 74%; bottom:  59%; height: 0%}
+  70% {right: 66.5%; bottom:  51.5%; height: 15%}
+  71% {right: 74%; bottom:  59%; height: 0%}
+  72% {right: 25%; bottom:  76%; height: 0%}
+  73% {right: 17.5%; bottom:  68.5%; height: 15%}
+  74% {right: 25%; bottom:  76%; height: 0%}
+  75% {right: 61%; bottom:  26%; height: 0%}
+  76% {right: 53.5%; bottom:  18.5%; height: 15%}
+  77% {right: 61%; bottom:  26%; height: 0%}
+  78% {right: 25%; bottom:  66%; height: 0%}
+  79% {right: 17.5%; bottom:  58.5%; height: 15%}
+  80% {right: 25%; bottom:  66%; height: 0%}
+  81% {right: 33%; bottom:  54%; height: 0%}
+  82% {right: 25.5%; bottom:  46.5%; height: 15%}
+  83% {right: 33%; bottom:  54%; height: 0%}
+  84% {right: 39%; bottom:  61%; height: 0%}
+  85% {right: 31.5%; bottom:  53.5%; height: 15%}
+  86% {right: 39%; bottom:  61%; height: 0%}
+  87% {right: 69%; bottom:  61%; height: 0%}
+  88% {right: 61.5%; bottom:  53.5%; height: 15%}
+  89% {right: 69%; bottom:  61%; height: 0%}
+  90% {right: 21%; bottom:  74%; height: 0%}
+  91% {right: 13.5%; bottom:  66.5%; height: 15%}
+  92% {right: 21%; bottom:  74%; height: 0%}
+  93% {right: 36%; bottom:  72%; height: 0%}
+  94% {right: 28.5%; bottom:  64.5%; height: 15%}
+  95% {right: 36%; bottom:  72%; height: 0%}
+  96% {right: 37%; bottom:  67%; height: 0%}
+  97% {right: 29.5%; bottom:  59.5%; height: 15%}
+  98% {right: 37%; bottom:  67%; height: 0%}
+}
+#tulogo9{
+  position: absolute;
+  width: auto;
+  height: 0%;
+  right: 75%;
+  bottom: 59%;
+  z-index: 42069;
+  animation: random9 75s infinite;
+}
+
+@keyframes random9 {
+  0% {right: 28%; bottom:  72%; height: 0%}
+  1% {right: 20.5%; bottom:  64.5%; height: 15%}
+  2% {right: 28%; bottom:  72%; height: 0%}
+  3% {right: 46%; bottom:  63%; height: 0%}
+  4% {right: 38.5%; bottom:  55.5%; height: 15%}
+  5% {right: 46%; bottom:  63%; height: 0%}
+  6% {right: 64%; bottom:  53%; height: 0%}
+  7% {right: 56.5%; bottom:  45.5%; height: 15%}
+  8% {right: 64%; bottom:  53%; height: 0%}
+  9% {right: 59%; bottom:  66%; height: 0%}
+  10% {right: 51.5%; bottom:  58.5%; height: 15%}
+  11% {right: 59%; bottom:  66%; height: 0%}
+  12% {right: 50%; bottom:  42%; height: 0%}
+  13% {right: 42.5%; bottom:  34.5%; height: 15%}
+  14% {right: 50%; bottom:  42%; height: 0%}
+  15% {right: 38%; bottom:  35%; height: 0%}
+  16% {right: 30.5%; bottom:  27.5%; height: 15%}
+  17% {right: 38%; bottom:  35%; height: 0%}
+  18% {right: 55%; bottom:  70%; height: 0%}
+  19% {right: 47.5%; bottom:  62.5%; height: 15%}
+  20% {right: 55%; bottom:  70%; height: 0%}
+  21% {right: 30%; bottom:  35%; height: 0%}
+  22% {right: 22.5%; bottom:  27.5%; height: 15%}
+  23% {right: 30%; bottom:  35%; height: 0%}
+  24% {right: 59%; bottom:  29%; height: 0%}
+  25% {right: 51.5%; bottom:  21.5%; height: 15%}
+  26% {right: 59%; bottom:  29%; height: 0%}
+  27% {right: 68%; bottom:  65%; height: 0%}
+  28% {right: 60.5%; bottom:  57.5%; height: 15%}
+  29% {right: 68%; bottom:  65%; height: 0%}
+  30% {right: 80%; bottom:  60%; height: 0%}
+  31% {right: 72.5%; bottom:  52.5%; height: 15%}
+  32% {right: 80%; bottom:  60%; height: 0%}
+  33% {right: 60%; bottom:  66%; height: 0%}
+  34% {right: 52.5%; bottom:  58.5%; height: 15%}
+  35% {right: 60%; bottom:  66%; height: 0%}
+  36% {right: 75%; bottom:  64%; height: 0%}
+  37% {right: 67.5%; bottom:  56.5%; height: 15%}
+  38% {right: 75%; bottom:  64%; height: 0%}
+  39% {right: 33%; bottom:  37%; height: 0%}
+  40% {right: 25.5%; bottom:  29.5%; height: 15%}
+  41% {right: 33%; bottom:  37%; height: 0%}
+  42% {right: 52%; bottom:  51%; height: 0%}
+  43% {right: 44.5%; bottom:  43.5%; height: 15%}
+  44% {right: 52%; bottom:  51%; height: 0%}
+  45% {right: 70%; bottom:  79%; height: 0%}
+  46% {right: 62.5%; bottom:  71.5%; height: 15%}
+  47% {right: 70%; bottom:  79%; height: 0%}
+  48% {right: 72%; bottom:  66%; height: 0%}
+  49% {right: 64.5%; bottom:  58.5%; height: 15%}
+  50% {right: 72%; bottom:  66%; height: 0%}
+  51% {right: 24%; bottom:  45%; height: 0%}
+  52% {right: 16.5%; bottom:  37.5%; height: 15%}
+  53% {right: 24%; bottom:  45%; height: 0%}
+  54% {right: 29%; bottom:  20%; height: 0%}
+  55% {right: 21.5%; bottom:  12.5%; height: 15%}
+  56% {right: 29%; bottom:  20%; height: 0%}
+  57% {right: 74%; bottom:  48%; height: 0%}
+  58% {right: 66.5%; bottom:  40.5%; height: 15%}
+  59% {right: 74%; bottom:  48%; height: 0%}
+  60% {right: 71%; bottom:  32%; height: 0%}
+  61% {right: 63.5%; bottom:  24.5%; height: 15%}
+  62% {right: 71%; bottom:  32%; height: 0%}
+  63% {right: 66%; bottom:  79%; height: 0%}
+  64% {right: 58.5%; bottom:  71.5%; height: 15%}
+  65% {right: 66%; bottom:  79%; height: 0%}
+  66% {right: 72%; bottom:  41%; height: 0%}
+  67% {right: 64.5%; bottom:  33.5%; height: 15%}
+  68% {right: 72%; bottom:  41%; height: 0%}
+  69% {right: 77%; bottom:  59%; height: 0%}
+  70% {right: 69.5%; bottom:  51.5%; height: 15%}
+  71% {right: 77%; bottom:  59%; height: 0%}
+  72% {right: 63%; bottom:  22%; height: 0%}
+  73% {right: 55.5%; bottom:  14.5%; height: 15%}
+  74% {right: 63%; bottom:  22%; height: 0%}
+  75% {right: 25%; bottom:  36%; height: 0%}
+  76% {right: 17.5%; bottom:  28.5%; height: 15%}
+  77% {right: 25%; bottom:  36%; height: 0%}
+  78% {right: 47%; bottom:  35%; height: 0%}
+  79% {right: 39.5%; bottom:  27.5%; height: 15%}
+  80% {right: 47%; bottom:  35%; height: 0%}
+  81% {right: 74%; bottom:  36%; height: 0%}
+  82% {right: 66.5%; bottom:  28.5%; height: 15%}
+  83% {right: 74%; bottom:  36%; height: 0%}
+  84% {right: 51%; bottom:  34%; height: 0%}
+  85% {right: 43.5%; bottom:  26.5%; height: 15%}
+  86% {right: 51%; bottom:  34%; height: 0%}
+  87% {right: 58%; bottom:  59%; height: 0%}
+  88% {right: 50.5%; bottom:  51.5%; height: 15%}
+  89% {right: 58%; bottom:  59%; height: 0%}
+  90% {right: 68%; bottom:  35%; height: 0%}
+  91% {right: 60.5%; bottom:  27.5%; height: 15%}
+  92% {right: 68%; bottom:  35%; height: 0%}
+  93% {right: 36%; bottom:  36%; height: 0%}
+  94% {right: 28.5%; bottom:  28.5%; height: 15%}
+  95% {right: 36%; bottom:  36%; height: 0%}
+  96% {right: 31%; bottom:  60%; height: 0%}
+  97% {right: 23.5%; bottom:  52.5%; height: 15%}
+  98% {right: 31%; bottom:  60%; height: 0%}
+}
+#tulogo10 {
+  position: absolute;
+  width: auto;
+  height: 0%;
+  right: 75%;
+  bottom: 59%;
+  z-index: 42069;
+  animation: random10 80s infinite;
+}
+
+@keyframes random10 {
+  0% {right: 61%; bottom:  48%; height: 0%}
+  1% {right: 53.5%; bottom:  40.5%; height: 15%}
+  2% {right: 61%; bottom:  48%; height: 0%}
+  3% {right: 33%; bottom:  37%; height: 0%}
+  4% {right: 25.5%; bottom:  29.5%; height: 15%}
+  5% {right: 33%; bottom:  37%; height: 0%}
+  6% {right: 27%; bottom:  68%; height: 0%}
+  7% {right: 19.5%; bottom:  60.5%; height: 15%}
+  8% {right: 27%; bottom:  68%; height: 0%}
+  9% {right: 57%; bottom:  29%; height: 0%}
+  10% {right: 49.5%; bottom:  21.5%; height: 15%}
+  11% {right: 57%; bottom:  29%; height: 0%}
+  12% {right: 60%; bottom:  61%; height: 0%}
+  13% {right: 52.5%; bottom:  53.5%; height: 15%}
+  14% {right: 60%; bottom:  61%; height: 0%}
+  15% {right: 55%; bottom:  24%; height: 0%}
+  16% {right: 47.5%; bottom:  16.5%; height: 15%}
+  17% {right: 55%; bottom:  24%; height: 0%}
+  18% {right: 79%; bottom:  30%; height: 0%}
+  19% {right: 71.5%; bottom:  22.5%; height: 15%}
+  20% {right: 79%; bottom:  30%; height: 0%}
+  21% {right: 60%; bottom:  58%; height: 0%}
+  22% {right: 52.5%; bottom:  50.5%; height: 15%}
+  23% {right: 60%; bottom:  58%; height: 0%}
+  24% {right: 58%; bottom:  39%; height: 0%}
+  25% {right: 50.5%; bottom:  31.5%; height: 15%}
+  26% {right: 58%; bottom:  39%; height: 0%}
+  27% {right: 63%; bottom:  46%; height: 0%}
+  28% {right: 55.5%; bottom:  38.5%; height: 15%}
+  29% {right: 63%; bottom:  46%; height: 0%}
+  30% {right: 65%; bottom:  32%; height: 0%}
+  31% {right: 57.5%; bottom:  24.5%; height: 15%}
+  32% {right: 65%; bottom:  32%; height: 0%}
+  33% {right: 61%; bottom:  72%; height: 0%}
+  34% {right: 53.5%; bottom:  64.5%; height: 15%}
+  35% {right: 61%; bottom:  72%; height: 0%}
+  36% {right: 36%; bottom:  32%; height: 0%}
+  37% {right: 28.5%; bottom:  24.5%; height: 15%}
+  38% {right: 36%; bottom:  32%; height: 0%}
+  39% {right: 22%; bottom:  53%; height: 0%}
+  40% {right: 14.5%; bottom:  45.5%; height: 15%}
+  41% {right: 22%; bottom:  53%; height: 0%}
+  42% {right: 80%; bottom:  65%; height: 0%}
+  43% {right: 72.5%; bottom:  57.5%; height: 15%}
+  44% {right: 80%; bottom:  65%; height: 0%}
+  45% {right: 57%; bottom:  77%; height: 0%}
+  46% {right: 49.5%; bottom:  69.5%; height: 15%}
+  47% {right: 57%; bottom:  77%; height: 0%}
+  48% {right: 24%; bottom:  68%; height: 0%}
+  49% {right: 16.5%; bottom:  60.5%; height: 15%}
+  50% {right: 24%; bottom:  68%; height: 0%}
+  51% {right: 45%; bottom:  78%; height: 0%}
+  52% {right: 37.5%; bottom:  70.5%; height: 15%}
+  53% {right: 45%; bottom:  78%; height: 0%}
+  54% {right: 56%; bottom:  56%; height: 0%}
+  55% {right: 48.5%; bottom:  48.5%; height: 15%}
+  56% {right: 56%; bottom:  56%; height: 0%}
+  57% {right: 42%; bottom:  27%; height: 0%}
+  58% {right: 34.5%; bottom:  19.5%; height: 15%}
+  59% {right: 42%; bottom:  27%; height: 0%}
+  60% {right: 55%; bottom:  43%; height: 0%}
+  61% {right: 47.5%; bottom:  35.5%; height: 15%}
+  62% {right: 55%; bottom:  43%; height: 0%}
+  63% {right: 32%; bottom:  72%; height: 0%}
+  64% {right: 24.5%; bottom:  64.5%; height: 15%}
+  65% {right: 32%; bottom:  72%; height: 0%}
+  66% {right: 45%; bottom:  44%; height: 0%}
+  67% {right: 37.5%; bottom:  36.5%; height: 15%}
+  68% {right: 45%; bottom:  44%; height: 0%}
+  69% {right: 79%; bottom:  66%; height: 0%}
+  70% {right: 71.5%; bottom:  58.5%; height: 15%}
+  71% {right: 79%; bottom:  66%; height: 0%}
+  72% {right: 67%; bottom:  42%; height: 0%}
+  73% {right: 59.5%; bottom:  34.5%; height: 15%}
+  74% {right: 67%; bottom:  42%; height: 0%}
+  75% {right: 21%; bottom:  78%; height: 0%}
+  76% {right: 13.5%; bottom:  70.5%; height: 15%}
+  77% {right: 21%; bottom:  78%; height: 0%}
+  78% {right: 78%; bottom:  50%; height: 0%}
+  79% {right: 70.5%; bottom:  42.5%; height: 15%}
+  80% {right: 78%; bottom:  50%; height: 0%}
+  81% {right: 24%; bottom:  77%; height: 0%}
+  82% {right: 16.5%; bottom:  69.5%; height: 15%}
+  83% {right: 24%; bottom:  77%; height: 0%}
+  84% {right: 72%; bottom:  45%; height: 0%}
+  85% {right: 64.5%; bottom:  37.5%; height: 15%}
+  86% {right: 72%; bottom:  45%; height: 0%}
+  87% {right: 79%; bottom:  71%; height: 0%}
+  88% {right: 71.5%; bottom:  63.5%; height: 15%}
+  89% {right: 79%; bottom:  71%; height: 0%}
+  90% {right: 51%; bottom:  47%; height: 0%}
+  91% {right: 43.5%; bottom:  39.5%; height: 15%}
+  92% {right: 51%; bottom:  47%; height: 0%}
+  93% {right: 74%; bottom:  63%; height: 0%}
+  94% {right: 66.5%; bottom:  55.5%; height: 15%}
+  95% {right: 74%; bottom:  63%; height: 0%}
+  96% {right: 34%; bottom:  39%; height: 0%}
+  97% {right: 26.5%; bottom:  31.5%; height: 15%}
+  98% {right: 34%; bottom:  39%; height: 0%}
 }
