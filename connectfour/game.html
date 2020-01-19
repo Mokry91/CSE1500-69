@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Connect four</title>
     <link rel="stylesheet" href="public/stylesheets/game.css"/>
-  </head>
-  <body>
-    <form action="/" method="get">
+</head>
+<body>
+<form action="/" method="get">
     <a href="/" method="get">
         <table id="logotitle">
             <tr>
@@ -23,90 +23,92 @@
             </tr>
         </table>
     </a>
-    </form>
-    <main>
-      <section id="gameboard">
-          <table>
-              <tr>
-                  <th style="width:14%; height: 50px"><span hidden id="p0"><img class="dot" src="public/images/pointer_red.png"/></span></th>
-                  <th style="width:14%"><span hidden id="p1"><img class="dot" src="public/images/pointer_red.png"/></span></th>
-                  <th style="width:14%"><span hidden id="p2"><img class="dot" src="public/images/pointer_red.png"/></span></th>
-                  <th style="width:14%"><span hidden id="p3"><img class="dot" src="public/images/pointer_red.png"/></span></th>
-                  <th style="width:14%"><span hidden id="p4"><img class="dot" src="public/images/pointer_red.png"/></span></th>
-                  <th style="width:14%"><span hidden id="p5"><img class="dot" src="public/images/pointer_red.png"/></span></th>
-                  <th style="width:14%"><span hidden id="p6"><img class="dot" src="public/images/pointer_red.png"/></span></th>
-              </tr>
-              <tr>
-                  <th><span><img id="circle50" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle51" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle52" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle53" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle54" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle55" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle56" class="dot" src="public/images/circle.png"/></span></th>
-              </tr>
-              <tr>
-                  <th><span><img id="circle40" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle41" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle42" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle43" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle44" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle45" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle46" class="dot" src="public/images/circle.png"/></span></th>
-              </tr>
-              <tr>
-                  <th><span><img id="circle30" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle31" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle32" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle33" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle34" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle35" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle36" class="dot" src="public/images/circle.png"/></span></th>
-              </tr>
-              <tr>
-                  <th><span><img id="circle20" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle21" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle22" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle23" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle24" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle25" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle26" class="dot" src="public/images/circle.png"/></span></th>
-              </tr>
-              <tr>
-                  <th><span><img id="circle10" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle11" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle12" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle13" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle14" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle15" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle16" class="dot" src="public/images/circle.png"/></span></th>
-              </tr>
-              <tr>
-                  <th><span><img id="circle00" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle01" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle02" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle03" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle04" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle05" class="dot" src="public/images/circle.png"/></span></th>
-                  <th><span><img id="circle06" class="dot" src="public/images/circle.png"/></span></th>
-              </tr>
-          </table>
-      </section>
-      <div id = "gameinfo"></div>
-    </main>
-    <!-- In general, in a production environment, 
-             all files would be compressed into a single one
-             to avoid multiple HTTP requests.
-             Automatic tools are available for this step.
-       
-    <script src="javascripts/config.js"></script>
-    <script src="javascripts/statuses.js"></script>
-    <script src="javascripts/messages.js"></script>
-    <script src="javascripts/alphabet.js"></script>
-    <script src="javascripts/ui-right.js"></script>
-    <script src="javascripts/interactions.js"></script> -->
-    <!-- browser parses the code from top to bottom, by now the DOM is built -->
-  </body>
-  <script src="jquery/jquery.js"></script>
-  <script src="public/scripts/mouse_events.js"></script>
+</form>
+<main>
+    <img id="tulogo" src="public/images/gay.png"/>
+    <img id="tulogo2" src="public/images/gay.png"/>
+    <section id="gameboard">
+        <table>
+            <tr>
+                <th style="width:14%; height: 50px"><span hidden id="p0"><img class="dot" src="public/images/pointer_red.png"/></span></th>
+                <th style="width:14%"><span hidden id="p1"><img class="dot" src="public/images/pointer_red.png"/></span></th>
+                <th style="width:14%"><span hidden id="p2"><img class="dot" src="public/images/pointer_red.png"/></span></th>
+                <th style="width:14%"><span hidden id="p3"><img class="dot" src="public/images/pointer_red.png"/></span></th>
+                <th style="width:14%"><span hidden id="p4"><img class="dot" src="public/images/pointer_red.png"/></span></th>
+                <th style="width:14%"><span hidden id="p5"><img class="dot" src="public/images/pointer_red.png"/></span></th>
+                <th style="width:14%"><span hidden id="p6"><img class="dot" src="public/images/pointer_red.png"/></span></th>
+            </tr>
+            <tr>
+                <th><span><img id="circle50" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle51" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle52" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle53" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle54" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle55" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle56" class="dot" src="public/images/circle.png"/></span></th>
+            </tr>
+            <tr>
+                <th><span><img id="circle40" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle41" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle42" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle43" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle44" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle45" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle46" class="dot" src="public/images/circle.png"/></span></th>
+            </tr>
+            <tr>
+                <th><span><img id="circle30" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle31" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle32" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle33" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle34" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle35" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle36" class="dot" src="public/images/circle.png"/></span></th>
+            </tr>
+            <tr>
+                <th><span><img id="circle20" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle21" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle22" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle23" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle24" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle25" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle26" class="dot" src="public/images/circle.png"/></span></th>
+            </tr>
+            <tr>
+                <th><span><img id="circle10" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle11" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle12" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle13" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle14" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle15" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle16" class="dot" src="public/images/circle.png"/></span></th>
+            </tr>
+            <tr>
+                <th><span><img id="circle00" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle01" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle02" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle03" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle04" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle05" class="dot" src="public/images/circle.png"/></span></th>
+                <th><span><img id="circle06" class="dot" src="public/images/circle.png"/></span></th>
+            </tr>
+        </table>
+    </section>
+    <div id = "gameinfo"></div>
+</main>
+<!-- In general, in a production environment,
+         all files would be compressed into a single one
+         to avoid multiple HTTP requests.
+         Automatic tools are available for this step.
+
+<script src="javascripts/config.js"></script>
+<script src="javascripts/statuses.js"></script>
+<script src="javascripts/messages.js"></script>
+<script src="javascripts/alphabet.js"></script>
+<script src="javascripts/ui-right.js"></script>
+<script src="javascripts/interactions.js"></script> -->
+<!-- browser parses the code from top to bottom, by now the DOM is built -->
+</body>
+<script src="jquery/jquery.js"></script>
+<script src="public/scripts/mouse_events.js"></script>
 </html>
