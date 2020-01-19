@@ -74,7 +74,12 @@ app.get("/", function(req, res){
     users[maxUser] += 1;
     res.cookie.userId = cookies.signedCookie.userId;
   }
-  res.sendFile("splash.html", {root: "./"});
+  res.render("splash.ejs", {
+    gamesInitialized: stats.gamesInitialized,
+    gamesAborted: stats.gamesAborted,
+    playersOnline: stats.playersOnline
+  });
+  //res.sendFile("splash.html", {root: "./"});
 });
 
 var websockets = [];
