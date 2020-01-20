@@ -4,6 +4,22 @@
     height: 20%;
 }
 
+#logo1{
+    content:url("../images/logo1.png");
+}
+
+#logo2{
+    content:url("../images/logo.png");
+}
+
+#logo1:active{
+    content:url("../images/logo.png");
+}
+
+#logo2:active{
+    content:url("../images/logo1.png");
+}
+
 #logotitle{
     width:30%; 
     margin-left:35%; 
