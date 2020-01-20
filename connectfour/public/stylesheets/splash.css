@@ -54,6 +54,17 @@ h3{
 
 #rules{
     float: left;
+    position: relative;
+    top: 0px;
+    transition: top;
+    transition-duration: 2s;
+}
+
+#rules:hover{
+    background-color: mediumvioletred;
+    top: 40px;
+    transition: top;
+    transition-duration: 2s;
 }
 
 #button{
