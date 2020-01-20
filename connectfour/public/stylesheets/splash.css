@@ -14,11 +14,11 @@
 h2::before,h2::after{
     content: "\1F525";
 }
-
+/*
 h3{
     position: absolute;
     top: 50%;
-}
+}*/
 
 #rules{
     background-color: #FFF200;
@@ -33,7 +33,7 @@ h3{
 
 #stats{
     position: absolute;
-    top: 40%;
+    top: 60%;
 }
 
 #rules{
