@@ -61,7 +61,14 @@ app.post("/play/moved", function(req, res){
 });
 
 app.get("/play", function(req, res){
-  res.sendFile("game.html", {root: "./"}); 
+  res.sendFile("game.html", {root: "./"});
+});
+
+var name="";
+app.get("/play/:name", function(req, res){
+  name = req.params.name;
+  console.log("1 "+name);
+  res.sendFile("game.html", {root: "./"});
 });
 
 app.get("/", function(req, res){
@@ -121,11 +128,12 @@ wss.on("connection", function connection(ws){
     gameStart: (game["gamePlayers"] === 2),
     turn: playerX["turn"],
     oponent: oponent,
+    op: name,
     nr: playerX["nr"]
   }));
   console.log(game.state);
   if(game.isFull()){
-    game.playerA.con.send(JSON.stringify({type:"begin"}));
+    game.playerA.con.send(JSON.stringify({type:"begin", op:name}));
     game = new Game(stats.gamesInitialised++);
   }
 
@@ -149,5 +157,5 @@ wss.on("connection", function connection(ws){
 
 
 
-//server.listen(port);
+// server.listen(3000);
 server.listen(process.env.PORT || 3000);

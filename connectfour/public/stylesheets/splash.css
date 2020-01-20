@@ -48,11 +48,11 @@ h3{
     right: 30%;
 }
 
-.playButton{
+#playButton{
     content:url("../images/play.png");
 }
 
-.playButton:hover{
+#playButton:hover{
     content:url("../images/playHover.png");
 
 }

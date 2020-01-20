@@ -8,3 +8,12 @@ socket.onmessage = function(event){
     if(info.type === "userCookieStuff") {num = info.value;}
     document.getElementById("cookie").innerHTML = num;
 };
+
+let playGame = function(){
+    let name = $("#name").val();
+    $.get("/play/"+name);
+};
+
+$(document).ready(function(){
+    $("#playButton").click(playGame);
+});
