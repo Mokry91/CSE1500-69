@@ -10,9 +10,7 @@ socket.onmessage = function(event){
 };
 
 let playGame = function(){
-    console.log("oof");
     let name = $("#name").val();
-    console.log(name);
     $.get("/play/"+name);
 };
 

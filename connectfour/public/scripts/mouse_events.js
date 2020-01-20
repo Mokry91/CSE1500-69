@@ -142,7 +142,10 @@ $(document).ready(function(){
 
 socket.onmessage = function(event){
     info = JSON.parse(event.data);
+    console.log("eskere " + info.type + " " + info.op);
     if(info.type == "begin"){
+        //TODO
+        console.log("this is "+info.op);
         document.getElementById("gameinfo").innerHTML = "Opponent's Turn";
     }
     if(info.type == "gameover"){
@@ -150,7 +153,8 @@ socket.onmessage = function(event){
         document.getElementById("gameinfo").innerHTML = "Other Player Left";
     }
     if(info.type == "gameBegin"){
-        console.log(info["turn"]);
+        //TODO
+        console.log(info.op);
         my_turn = info["turn"];
         if(my_turn){
             document.getElementById("gameinfo").innerHTML = "Your Turn";
