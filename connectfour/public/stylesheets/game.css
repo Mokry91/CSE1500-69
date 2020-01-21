@@ -62,6 +62,10 @@ a:link {
 }
 
 #gameinfo{
+    position:relative;
+    top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     background-color: #FFF200;
     border-style: double;
     border-width: 5px;
@@ -70,4 +74,13 @@ a:link {
     margin-left: 30%;
     font-size: 40px;
     font-family: "Comic Sans MS";
+    transition: top;
+    transition-duration: 2s;
+}
+
+#gameinfo:hover{
+    background-color: mediumvioletred;
+    top: 40px;
+    transition: top;
+    transition-duration: 2s;
 }

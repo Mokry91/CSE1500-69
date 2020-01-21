@@ -4,6 +4,22 @@
     height: 20%;
 }
 
+#logo1{
+    content:url("../images/logo1.png");
+}
+
+#logo2{
+    content:url("../images/logo.png");
+}
+
+#logo1:active{
+    content:url("../images/logo.png");
+}
+
+#logo2:active{
+    content:url("../images/logo1.png");
+}
+
 #logotitle{
     width:30%; 
     margin-left:35%; 
@@ -11,7 +27,7 @@
     text-align: center;
 }
 
-h2::before,h2::after{
+h2::before{
     content: "\1F525";
 }
 /*
@@ -38,6 +54,34 @@ h3{
 
 #rules{
     float: left;
+    position: relative;
+    top: 0px;
+    transition: top;
+    transition-duration: 2s;
+}
+
+#rules:hover{
+    background-color: mediumvioletred;
+    top: 40px;
+    transition: top;
+    transition-duration: 2s;
+}
+
+#rules:fullscreen{
+    background-color: cyan;
+    top: 40px;
+    transition: top;
+    transition-duration: 2s;
+}
+
+#rules #rulesText::after{
+    content: "\a To win Connect Four you must be the first player to get four of your colored checkers in a row either horizontally, vertically or diagonally.";
+    font-size: 15px;
+    white-space: pre-wrap;
+}
+
+#rules:fullscreen #rulesText::after{
+    content: "\a \a Description \a \a This game is played on a vertical board wich has seven hollow columns and six rows. Each column has a hole in the upper part of the board, where pieces are introduced. There is a window for every square, so that pieces can be seen from both sides. \a In short, it´s a vertical board with 42 windows distributed in 6 rows and 7 columns. \a \a Both players have a set of 21 thin pieces (like coins); each of them uses a different colour. The board is empty at the start of the game. \a \a Objective \a \a The aim for both players is to make a straight line of four own pieces; the line can be vertical, horizontal or diagonal. \a \a How the game goes on \a \a Before starting, players decide randomly which of them will be the beginner; moves are made alternatively, one by turn. \a Moves entails in placing new pieces on the board; pieces slide downwards from upper holes, falling down to the last row or piling up on the last piece introduced in the same column. So, in every turn the introduced piece may be placed at most on seven different squares. \a The winner is the first player who gets a straight line made with four own pieces and no gaps between them.";
 }
 
 #button{
