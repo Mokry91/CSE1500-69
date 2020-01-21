@@ -4,7 +4,7 @@
     <title>Connect four</title>
     <link rel="stylesheet" href="public/stylesheets/splash.css"/>
 </head>
-<body>
+<body id="body">
 <main >
     <img id="tulogo1" src="public/images/gay.png"/>
     <img id="tulogo2" src="public/images/gay.png"/>
@@ -31,12 +31,12 @@
             </th>
         </tr>
         <h3 id="stats">
-            <%= gamesInitialised %> 
+            <%= gamesInitialised %>
             <%if (gamesInitialised != 1) { %>
                 games
             <% } else { %>
                 game
-            <% } %> initialized, 
+            <% } %> initialized,
             <%= gamesAborted %> aborted,
             <%= playersOnline %> players online.
         </h3>
@@ -46,9 +46,11 @@
     <div>welcome back for the <span id="cookie"></span>th time</div>
     <section id="rules">
         <!--img src ="connectfour/public/images/rules_background.gif" alt="rules"-->
-        <h2> RULES </h2>
-        <p>To win Connect Four you must be the first player to get four of your colored checkers in a row either horizontally, vertically or diagonally.</p>
+        <h2 id = "rulesText"> RULES </h2>
+<!--        <p id="rulesText">To win Connect Four you must be the first player to get four of your colored checkers in a row either horizontally, vertically or diagonally.</p>-->
+
     </section>
+    <button onclick="var el = document.getElementById('rules'); el.webkitRequestFullscreen();">Show Rules Fullscreen!</button>
       <h3 id="stats"></h3>
 </main>
 <div id="button">
