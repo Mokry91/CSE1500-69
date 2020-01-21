@@ -33,11 +33,13 @@ let winner = function(img){
     if(img == 'public/images/red.png'){
         my_turn = false;
         socket.send(JSON.stringify({type: "gameended"}));
+        document.getElementById("winSound").play();
         return "You Won!";
     }
     if(img == 'public/images/yellow.png'){
         socket.send(JSON.stringify({type: "gameended"}));
         my_turn = false;
+        document.getElementById("loseSound").play();
         return "You Lost :(";
     }
 }
@@ -125,6 +127,7 @@ let clickOnColumn = function(column){
     return function(){
         if ($('#circle5'+column).attr('src') !== emptyCircle) return;
         if (!my_turn) return;
+        document.getElementById("clickSound").play();
         document.getElementById("gameinfo").innerHTML = "Opponent's Turn";
         my_turn = false;
         waiting = true;

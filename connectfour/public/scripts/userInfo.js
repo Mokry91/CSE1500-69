@@ -14,6 +14,16 @@ let playGame = function(){
     $.get("/play/"+name);
 };
 
+let playSound = function(soundID){
+    return function () {
+        document.getElementById(soundID).play();
+    }
+}
+
 $(document).ready(function(){
     $("#playButton").click(playGame);
+    for(var i = 1; i < 11; i++){
+        $("#tulogo"+i).click(playSound("gaySound"));
+    }
+    
 });
