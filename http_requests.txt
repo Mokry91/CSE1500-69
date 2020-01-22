@@ -6,7 +6,7 @@ HEAD / HTTP/1.1
 Host: surfweer.nl
 
 HTTP/1.1 200 OK
-Date: Thu, 09 Jan 2020 20:09:33 GMT
+Date: Thu, 09 Jan 2020 21:09:43 GMT
 Content-Type: text/html; charset=UTF-8
 Connection: keep-alive
 Set-Cookie: __cfduid=d94eaa2a5594383fc0e9a824cc0a9724f1578600573; expires=Sat, 08-Feb-20 20:09:33 GMT; path=/; domain=.surfweer.nl; HttpOnly; SameSite=Lax
@@ -22,7 +22,7 @@ GET / HTTP/1.1
 Host: surfweer.nl
 
 HTTP/1.1 200 OK
-Date: Thu, 09 Jan 2020 20:09:45 GMT
+Date: Thu, 09 Jan 2020 21:10:58 GMT
 Content-Type: text/html; charset=UTF-8
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -316,7 +316,7 @@ HEAD /surf HTTP/1.1
 Host: surfweer.nl
 
 HTTP/1.1 301 Moved Permanently
-Date: Thu, 09 Jan 2020 20:10:01 GMT
+Date: Thu, 09 Jan 2020 21:11:42 GMT
 Content-Type: text/html; charset=UTF-8
 Connection: keep-alive
 Set-Cookie: __cfduid=d8888c651f3c8e0b1ad6e60a69de885691578600601; expires=Sat, 08-Feb-20 20:10:01 GMT; path=/; domain=.surfweer.nl; HttpOnly; SameSite=Lax
@@ -330,13 +330,13 @@ Vary: User-Agent
 CF-Cache-Status: DYNAMIC
 Server: cloudflare
 CF-RAY: 55290d3d0ca2c85b-AMS
-
+=
 
 HEAD /surf/webcams HTTP/1.1
 Host: surfweer.nl
 
 HTTP/1.1 301 Moved Permanently
-Date: Thu, 09 Jan 2020 20:10:27 GMT
+Date: Thu, 09 Jan 2020 21:12:27 GMT
 Content-Type: text/html; charset=UTF-8
 Connection: keep-alive
 Set-Cookie: __cfduid=d8534fe624187d7ba50c8e3ebfd7c98601578600627; expires=Sat, 08-Feb-20 20:10:27 GMT; path=/; domain=.surfweer.nl; HttpOnly; SameSite=Lax
@@ -356,7 +356,7 @@ GET /surf/webcams HTTP/1.1
 Host: surfweer.nl
 
 HTTP/1.1 301 Moved Permanently
-Date: Thu, 09 Jan 2020 20:10:42 GMT
+Date: Thu, 09 Jan 2020 21:12:59 GMT
 Content-Type: text/html; charset=UTF-8
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -373,17 +373,13 @@ Server: cloudflare
 CF-RAY: 55290e3bde82c85b-AMS
 
 0
-
-
-Trying 104.24.125.128...
-Connected to www.surfweer.nl.
-Escape character is '^]'.
+=
 
 HEAD /surf/webcams/ HTTP/1.1
 Host: surfweer.nl
 
 HTTP/1.1 200 OK
-Date: Thu, 09 Jan 2020 20:20:38 GMT
+Date: Thu, 09 Jan 2020 21:21:21 GMT
 Content-Type: text/html; charset=UTF-8
 Connection: keep-alive
 Set-Cookie: __cfduid=dbb04c041fc0d97c3ff3adcf8ca0a35a21578601237; expires=Sat, 08-Feb-20 20:20:37 GMT; path=/; domain=.surfweer.nl; HttpOnly; SameSite=Lax
@@ -404,7 +400,7 @@ GET /surf/webcams/ HTTP/1.1
 Host: surfweer.nl
 
 HTTP/1.1 200 OK
-Date: Thu, 09 Jan 2020 20:20:55 GMT
+Date: Thu, 09 Jan 2020 21:22:54 GMT
 Content-Type: text/html; charset=UTF-8
 Transfer-Encoding: chunked
 Connection: keep-alive
