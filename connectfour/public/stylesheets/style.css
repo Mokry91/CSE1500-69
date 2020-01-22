@@ -1,3 +1,4 @@
+
 body{
   width: 70%;
   padding-left: 15%;
@@ -6,11 +7,35 @@ body{
   text-align: center;
   font-family: "Footlight MT Light", Times, serif;
 }
+#warning{
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+  body{
+    background-color: pink;
+  }
+  #warning{
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%;
+    z-index: 42069;
+    border-color: black;
+    border-style: double;
+    background-color: red;
+    font-size: 80px;
+    visibility: visible;
+  }
+}
 
 
 /*body:active{*/
 /*  background-color: crimson;*/
 /*}*/
+
+
 
 #tulogo1{
   position: absolute;
