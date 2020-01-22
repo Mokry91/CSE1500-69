@@ -1,0 +1,9 @@
+-pointer to columns based on where your mouse is
+-click on column causes a thing to fall down
+	-plays a sound
+	-changes game state (tells you its opponents move)
+-go back to splash screen button
+-after a thing falls down
+	-check whether win and if win/lose
+		-play sound
+		-say who won

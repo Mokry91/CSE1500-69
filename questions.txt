@@ -1,0 +1,12 @@
+1.2
+	No, because I can't access certain links for imgs etc
+1.3
+	Transfer-Encoding is a hop-by-hop header, that is applied to a message between two nodes, not to a resource itself
+1.4
+	sets tags to see what you have to do with the cache before running the website? i think?
+2.1
+	it being smaller removes end of the content, and it being bigger adds something to the end of the content to make it the same length
+3.1
+	Nope, because the browser saves it
+3.2
+	I have to add it myself because hte browser adds it to the http request itself, so i have to add it when doing http

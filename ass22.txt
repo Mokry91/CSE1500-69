@@ -1,0 +1,6 @@
+the game state
+	-boolean whether its your turn
+the game board
+	-each parts of game board just as <img> on screen
+the game items
+	-we dont have any
