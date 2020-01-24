@@ -42,7 +42,7 @@ let winner = function(img){
         document.getElementById("loseSound").play();
         return "You Lost :(";
     }
-}
+};
 
 let checkWin = function(row, column){
     return function() {
@@ -58,7 +58,7 @@ let checkWin = function(row, column){
             }
             if (amount === 4) {
                 console.log("WIN"  + $('#circle'+row+(column+i)).attr('src'));
-                document.getElementById("gameinfo").innerHTML = winner($('#circle'+(row)+(column+i)).attr('src')); 
+                document.getElementById("gameinfo").innerHTML = winner($('#circle'+(row)+(column+i)).attr('src'));
                 return;
             }
         }
@@ -72,7 +72,7 @@ let checkWin = function(row, column){
                 curr = $('#circle'+(row+i)+column).attr('src');
             }
             if (amount === 4) {
-                console.log("WIN" + $('#circle'+(row+i)+column).attr('src')); 
+                console.log("WIN" + $('#circle'+(row+i)+column).attr('src'));
                 document.getElementById("gameinfo").innerHTML = winner($('#circle'+(row+i)+column).attr('src'));
                 return;
             }
@@ -117,7 +117,7 @@ var insertInColumn = function(column, color){
         setTimeout(moveRow(row, column, color), (5-row)*200);
         row--;
     }
-    
+
     setTimeout(checkWin(row+1, column), (6-row)*200+100);
     /*if (color === 'yellow')
         setTimeout(function(){my_turn = true;}, (6-row)*200+10);*/
