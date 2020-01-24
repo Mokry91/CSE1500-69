@@ -1,3 +1,0 @@
-background - #E0E0E0
-blue - #009FD9
-red - #DB0028
